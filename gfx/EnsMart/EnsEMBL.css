@@ -1,0 +1,458 @@
+/* THIS FILE SHOULD AUTOMATICALLY BE RE WRITTEN FROM THE -tmpl FILE */
+
+.gs_edge  { padding: 2px; background-color: #ffcc00; font-weight: bold; }
+.gs_req   { padding: 2px; background-color: #ffffcc; color: #cc0000 }
+.gs_body  { padding: 2px;  background-color: #ffffcc }
+.gs_nav   { font-weight: bold; }
+.gs_nav a        { text-decoration: none; }
+.gs_nav a:hover  { text-decoration: underline; }
+
+.gv_warning   { padding: 2px; background-color: #EEEEEE; color: #cc0000 }
+HTML,BODY {
+ #   background-color: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+DIV,H1,H2,.H2,H3,.H3,H4,.h4,H5,.H5,H6,.H6,I,EM,B,LI,UL,OL,DD,DT,ADDRESS,DL,STRONG,BLOCKQUOTE,P,INPUT.button,TABLE,TABLE.trailbar,TH,TH.small,td.small,.small,SELECT,.barial,.barialw, .new, TD,B.trailbar,.banner  {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+I,EM,B,LI,UL,OL,DD,DT,TT,ADDRESS,DL,STRONG,BLOCKQUOTE,P,INPUT.button,TABLE,TABLE.trailbar,TH.small,.small,.barial,.barialw,.note, PRE, .acetree, P.caption, .new,TD,B.trailbar,.barialb  {
+    font-size: 10pt;
+}
+
+.barial, .barialw {
+    font-weight: bold;
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6, .barialb {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+h1,.h1,h2,.h2 {
+    font-size: 20pt;
+    text-align: left;
+}
+
+H3,.H3, H3 A, H3 I {
+    font-size: 16pt;
+}
+
+H4,.H4 {
+    font-size: 14pt;
+}
+
+H5,.H5 {
+    font-size: 12pt;
+}
+
+H6,.H6 {
+    font-size: 10pt;
+}
+
+a {
+    background-color: transparent;
+}
+
+A:link {
+    color: #A00000;
+}
+A:visited {
+    color: #000070;
+}
+A:active {
+    color: #ff0000;
+}
+
+TABLE.search {
+    border-top: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+TT {
+   font-family: Courier, fixed;
+}
+.background1, .yellow1, INPUT.button, SELECT {
+    background-color: #EEEEEE;
+}
+
+select.white {
+    background-color: #ffffff;
+}
+
+.background2, .yellow2 {
+  background-color: 5870a3;
+}
+
+.background3, .yellow3 {
+  background-color: f6f7f4;
+}
+
+.header1, .violet1 {
+  background-color: #e2e2ff;
+  text-decoration: none;
+}
+
+.violet2 {
+  background-color: #eeeeff;
+}
+
+.violet3, .header2 {
+  background-color: #f5f5ff;
+}
+
+.grey1 {
+  background-color: #aaaaaa;
+}
+
+.grey2 {
+  background-color: #cccccc;
+}
+
+.red1 {
+  color: #A00000;
+}
+.red2 {
+  background-color: #a00000;
+}
+
+SELECT.white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.white, .red2, .barialw {
+  color: #ffffff;
+}
+
+.black,.description, B.trailbar {
+  background-color: #000000;
+}
+
+TH {
+    padding: 0;
+}
+
+.highlight {
+    background-color: #f5deb3;
+}
+
+TH.small {
+    padding: 0;
+}
+.banner {
+    font-size: 18pt;
+    align: center;
+    background-color: #FFFFFF;
+    color: #5870a3;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+TABLE.trailbar {
+    align: center;
+}
+TD {
+    padding: 0;
+}
+a.small, TD.small {
+    font-size: 8pt;
+    padding: 0;
+}
+TD.search {
+    font-size: 8pt;
+}
+TD.header {
+    font-size: 10pt;
+    padding: 0;
+}
+TD.trailbar {
+    font-size: 10pt;
+    text-align: left;
+    background-color: #f5f5ff;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+TD.navbarhead {
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: middle;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+TD.navbar {
+    font-size: 8pt;
+    text-align: right;
+    vertical-align: middle;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+TD.lfooter {
+    font-size: 10pt;
+    text-align: left;
+    background-color: #FFFFFF;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+TD.rfooter {
+    font-size: 10pt;
+    text-align: right;
+    background-color: #FFFFFF;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.gene {
+    font-style: italic   
+}
+.new {
+    color: #FF0000;
+    background-color: #FFFFCC;
+}
+PRE {
+   font-family: Courier, monospace;
+}
+pre.snpmarkup, pre.snpmarkup span, PRE.snpmarkup, PRE.snpmarkup span {
+   font-size: 8pt;
+   font-family: Courier, monospace; 
+}
+
+PRE.peptide {
+   font-family: Courier, monospace;
+}
+PRE.dna {
+   font-family: Courier, monospace;
+}
+PRE A, PRE A:LINK, PRE A:ACTIVE, PRE A:VISITED {
+   font-family: Courier, monospace;
+   text-decoration: none
+}
+
+
+.error {
+    color: red;
+    font-size: 12pt;
+}
+
+Blockquote.abstract {
+    font-size: 10pt; 
+    background-color: rgb(255,248,220);
+}
+
+small.normal {
+  font-size: 8pt;
+}
+
+.ddedge {
+  background-color: #000000;
+}
+.ddmain, td.ddmain {
+  background-color: #f6f7f4;
+  font-size: 8pt;
+  font-family: Arial, helvetica, verdana, sans-serif;
+  color: #000000;
+}
+td.ddmain a {
+  background-color: #f6f7f4;
+  text-decoration : none;
+  font-size: 8pt;
+  font-family: Arial, helvetica, verdana, sans-serif;
+  color: #000099;
+}
+.dddiv {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* martview styles */
+
+TD.panel_big_head{ 	
+  background-color: #EEEEEE
+  font-size:        large;
+  font-weight:      bold;   
+  color:            #990000;
+  align:            left; }
+
+TD.panel_head{ 	
+/*  background-color: #BFD5E8; */
+  background-color: #EEEEEE;
+  font-weight:      bold;   
+/*  color:            #3366FF; */
+  align:            left; }
+
+TD.block_head { 
+  background-color: #FFFFFF;
+  font-style:       italic;
+  font-weight:      bold;
+  color:            #;
+  align:            left;  }
+
+TD.mart_block_head { 
+  background-color: #FFFFFF;
+  font-style:       italic;
+  align:            left;  }
+
+TD.alt_mart_block_head { 
+  background-color: #FFFFFF;
+  font-style:       italic;
+  font-weight:      bold;
+  color:            navy;
+  align:            left;  }
+
+TD.entry_warning { 
+  background-color: #FFFFFF;
+  font-style:       italic;
+  color:            #990000;
+  align:            left;  }
+
+TD.panel_text{ 
+  background-color: #EEEEEE;
+  align:            left; }
+
+TD.status_panel_head{ 
+  /* background-color: 5870a3; */
+  background-color: cccccc;
+  /* color:            #; */
+  color:            #;
+  font-size:        large;
+  font-weight:      bold;   
+  align:            left; }
+
+TD.status_block_head{ 
+  background-color: CCCCCC;
+  color:            #;
+  font-size:        medium;
+  font-weight:      bold;   
+  align:            left; }
+
+TD.status_entry{ 
+/*  background-color: 5870a3; */
+/*  color:            #FFFFFF; */
+  background-color: CCCCCC;
+  color:            #;
+  font-size:        medium;
+  align:            left; }
+
+TD.status_warning { 
+  background-color: 5870a3;
+  color:            #990000;
+  font-size:        small;
+  font-style:       italic;
+  align:            left;  }
+
+TD.main_panel_bg {
+/*  background-color: BFD5E8 */
+    background-color: EEEEEE
+}
+
+TD.main_panel_fg {
+  background-color: #FFFFFF;
+  align:            left;
+}
+
+TD.alt_main_panel_fg {
+  background-color: #FFFFFF;
+  align:            left;
+  color:            navy; 
+/*  font-weight:       bold; */
+/*  font-style:       italic; */
+}
+
+TD.main_panel_border {
+/*  background-color: #999999; */
+  background-color: #394a6f;
+}
+
+TD.main_panel_fg_bold {
+  background-color: #FFFFFF;
+  color:            #;
+  align:            left;
+  font-size:        small;
+  font-weight:      bold;
+}
+
+/* New CSS directives - BG */
+
+table.standard_two_col {
+    border:    	    	1px solid #808080;
+    background-color: 	EEEEEE;
+    border-spacing: 	0px;
+    margin:             0px;
+}
+
+table.standard_two_col tr th {
+    border:    	      1px solid #808080;
+    align:            left;  
+    padding: 	    	  4px;
+    font-style:       bold;
+    font-size:     	  13pt;
+    color:  	    	  FFFFFF;
+    background-color: 5870a3;
+    
+}
+
+table.standard_two_col tr td {
+    border:    	    	1px solid #808080;
+    padding: 	    	4px;    
+    background-color: 	EEEEEE;
+}
+
+table.hidden { 
+   border: 			0px;
+   border-spacing: 	0px  ;
+} 
+
+
+table.hidden tr th {
+   border: 0px ;
+   padding-left: 	4px ;
+   padding-top: 	0px ;
+   padding-bottom: 	2px ;
+   border-spacing: 	0px ;
+   font-style:     	bold;
+   background-color: 	EEEEEE;
+   font-size:      	10pt;
+   color:  	    	#000000;
+}
+
+table.hidden tr td { 
+   border: 0px ;
+   padding-left: 	4px ;
+   padding-top: 	0px ;
+   padding-bottom: 	2px ;
+   border-spacing: 	0px ;
+}
+
+
+table.mart_results {
+   border: 0px;
+   border: 1px solid #bbbbbb;
+   
+}
+table.mart_results td {
+   padding: 4px;  
+   border: 1px solid #bbbbbb;
+
+}
+
+table.mart_results tr {
+  
+}
+

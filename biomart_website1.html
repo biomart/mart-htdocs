@@ -1,0 +1,545 @@
+<html><!-- InstanceBegin template="/Templates/biomart_standalone.dwt" codeOutsideHTMLIsLocked="false" -->	
+	<head> 
+		<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="Description" content="BioMart is a simple and robust data integration system for large scale data querying. It has been designed to provide researchers with an easy and interactive access to both the wealth of data available on the Internet and for in house data integration.">
+<meta name="keywords" content="BioMart, DATABASE, SEARCHES, protein">
+
+<title>BioMart Website Local Installation</title>
+ <script language="javascript" type="text/javascript">
+<!--
+var currentTab="Documentation";
+// -->
+</script>
+<!-- InstanceEndEditable -->
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="head" -->
+
+
+
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="include/stylesheet.css" type="text/css" />
+ <script language="javascript" type="text/javascript">
+<!--
+
+
+if (top != self)
+   {
+    top.location.href=location.href;
+   }
+	function colourTab(){
+		if((document.getElementById(currentTab))){
+			(document.getElementById(currentTab)).className='menuh';
+		}
+	}
+
+	function rollOver(overTab){
+		if(currentTab!=overTab){
+			(document.getElementById(overTab)).className='menuh';
+		}
+	}
+	function rollOut(overTab){
+		if(currentTab!=overTab){
+			(document.getElementById(overTab)).className='menu';
+		}
+	}
+// -->
+</script>
+
+</head>
+<body  marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" onLoad="colourTab()" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabletop">
+	<tr>
+		
+    <td width="270" align="right"><a href="index.html"><img src="images/banner.gif" alt="EBI Home Page" width="270" height="68" border="0" /></a></td>
+		 <td valign="top" align="right" width="100%"><table border="0" cellspacing="0" cellpadding="0" class="tabletop" width="100%" height="65">
+              <tr> 
+                
+          <td valign="top" align="right" colspan="2">&nbsp;</td>
+              </tr>
+              <tr> 
+                
+          <td align="left" valign="bottom">&nbsp;</td>
+          <td align="right" valign="middle">&nbsp;</td>
+              </tr>
+            </table></td>
+	</tr>
+	<tr><td colspan="2"><img alt="Image" src="images/trans.gif" width="1" height="5" /></td></tr>
+</table><table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabletop">
+	<tr>
+		<td width="100%"><table class="menutable" border="1"  cellpadding="2" cellspacing="0" bordercolor="#ECEEF0" width="750" rows="*, *, *, *, *, *, *, *">
+        <tr>
+          <td align="center" valign="middle" width="150" height="20" nowrap="true"  class="menu" id="BioMart Home" onClick="location='index.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Home</td> 
+          <td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="Documentation" onClick="location='install.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Documentation</td> 
+         
+<!-- <td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="Publications" onClick="location='publications.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Publications</td> -->
+		  <td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="News" onClick="location='news.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">News</td> 
+          <td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="Contact" onClick="location='contact.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Contact</td> 
+          <td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="Credits" onClick="location='credits.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Credits</td> 
+
+
+<!--		<td align="center" valign="middle" width="150" nowrap="true"  class="menu"  id="Jobs" onClick="location='jobs.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">Jobs</td>
+-->
+
+		</tr>
+      </table></td></tr> 
+	<tr>
+		<td width="100%" height="5" class="tablehead"><table width="100%" height="5" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="100%" height="20" align="center"><!-- InstanceBeginEditable name="topnav" --><nobr><a href = "index.html" class = "white">BioMart</a></nobr><a name="0"></a><!-- InstanceEndEditable --></td>
+              </tr> 
+            </table></td>
+	</tr>
+	<tr>
+		<td  class="tableborder"><img alt="Image" src="images/trans.gif" height= "3" width="1" /></td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="6" class="tablebody" height="6"><img alt="Image" src="images/trans.gif" width="1" height="6" /></td>
+	</tr>
+	<tr>
+		
+    <td  width="1%" height="20"><img alt="Image" src="images/trans.gif" height="20" width="20" /></td>
+		
+    <td width="1%" height="20" valign="top" align="left" bgcolor="#ffffff"><img alt="Image" src="images/trans.gif" width="20" height="20" /></td>
+		
+    <td width="100%">&nbsp;</td>
+		
+    <td width="1%" colspan="2"><img alt="Image" src="images/trans.gif" height="8" width="20" /></td> 
+	</tr>
+	<tr>
+		
+    <td  width="1%" valign="top" align="left"><img alt="Image" src="images/trans.gif" width="20" height="30" /></td>
+    		
+    <td width="1%">&nbsp;</td>
+          	
+    <td align="left" valign="top" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+                	
+          <td width="100%" valign="top" nowrap><!-- InstanceBeginEditable name="contents" --><table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td class = "tablegreen" nowrap><nobr>&nbsp;<span class = "whitetitle">BioMart</span>&nbsp;</nobr></td>
+                      <td  width="100%"><nobr class="pagetitle">&nbsp;Website Local Installation</nobr></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><br />
+                                          The BioMart website code (biomart-web) has been adapted from Ensembl website code. The section below is based on Ensembl website installation instructions, which have been has been significantly shortened and adapted to BioMart needs. If you are installing BioMart with Ensembl please refer to Ensembl website installation instructions for full list of Ensembl requirements. This section will describe the cut and paste instruction for installing a standalone BioMart website.
+
+<br />
+                  <br />
+<br>
+<span class="pbold">The following is an overwiew of the BioMart Website installation:</span>						<ul>
+						<li><a href="#sit" class="greenboldsmall_list">Site Structure</a></li>
+						<li><a href="#apa" class="greenboldsmall_list"> Apache &amp; mod_perl</a></li>
+						<li><a href="#per" class="greenboldsmall_list"> Perl modules</a></li>
+						<li><a href="#bio" class="greenboldsmall_list"> BioMart modules</a></li>
+						<li><a href="#con" class="greenboldsmall_list"> Configuration</a></li>
+						<li><a href="#sta" class="greenboldsmall_list"> Starting the BioMart website</a></li>
+						<li><a href="#sto" class="greenboldsmall_list"> Stopping the BioMart website</a></li>
+						</ul></td>
+                    </tr>
+                  </table>
+                  <br /><br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="sit" id="sit"></a> Site Structure</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      
+                <td><br>
+                  The site structure  is self-contained within a biomart-web directory:
+                  <pre class="preformatted">
+ biomart-web/
+|-- biomart-plib           BioMart perl library
+|-- conf                   Website configuration files
+|-- htdocs                 Website HTML and image files
+|-- modules                Website accessory modules
+|-- perl                   Website mod_perl modules
+|-- util                   Utility scripts</pre>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="apa" id="apa"></a> Apache &amp; mod perl</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      
+                <td><span class="pbold"><br>
+                  NB.</span> It is important that you install the apache and modperl versions as stated in the instructions and compile them as indicated below.
+<br>
+                                                
+                  <ol>
+					 
+                    <li>Download the Apache source tarball from http://httpd.apache.org/dist/httpd/. Get the current stable version - at the time of writing, this is 1.3.33, and the file to download is <br>
+                      <br>
+                                            <span class="preformatted">apache_1.3.33.tar.gz</span>. </li>
+                    <br />
+                    <br />
+
+                    <li>Download the mod_perl source from http://www.cpan.org/modules/by-module/Apache/ . Again, get the latest version, currently this is 1.29 and the file to download is<br>
+                      <br>
+                                             <span class="preformatted">mod_perl-1.29.tar.gz</span>.</li>
+                    <br />
+                    <br />
+
+                    <li> Unpack all the sources in a working directory with:
+<br>
+                      <br>
+                      <span class="preformatted">$ gunzip < apache_1.3.33.tar.gz | tar xvf - <br>
+$ gunzip < mod_perl-1.29.tar.gz | tar xvf - <br>
+$ cd apache_1.3.33 <br>
+$ ./configure <br>
+$ cd ../mod_perl-1.29</span></li>
+                    <br />
+                    <br />
+
+                    <li>Build the perl makefile:
+<br>
+                      <br>
+                      <span class="preformatted">$ perl Makefile.PL APACHE_SRC=../apache_1.3.33/src \ <br>
+DO_HTTPD=1 USE_APACI=1 EVERYTHING=1 </span></li>
+                    <br />
+                    <br />
+
+                    <li>Run the 'make' utility:
+<br>
+                      <br>
+                      <span class="preformatted">$ make</span></li>
+                    <br />
+                    <br />
+
+                    <li>install
+<br>
+                      <br>
+                      <span class="preformatted">$ make install </span></li>
+                    <br />
+                    <br />
+
+                    <li>Return to the Apache install directory:
+<br>
+                      <br>
+                      <span class="preformatted">$ cd ../apache_1.3.33</span> </li>
+                    <br />
+                    <br />
+
+                    <li> ...and run the Apache configure script:
+<br>
+                      <br>
+                      <span class="preformatted">$ ./configure --enable-module=include \<br>
+ --activate-module=src/modules/perl/libperl.a \ <br>
+--enable-module=perl </span></li>
+                    <br />
+                    <br />
+
+                    <li>Run 'make', and install:
+<br>
+                      <br>
+                      <span class="preformatted">$ make <br>
+$ make install</span></li>
+                  </ol>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="per" id="per"></a> Perl modules</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>The BioMart website needs a few external Perl modules to be installed in order for it to run. These modules can all be downloaded from <a href="http://www.cpan.org">www.cpan.org</a>, and are all installed in much the same way:<br>
+<br>
+ Download the module tarball, unpack in a working directory, and install the module:
+<br><br>
+                  <span class="preformatted">$ gunzip < module.tar.gz | tar xvf - <br>
+$ cd module <br>
+$ perl Makefile.PL <br>
+$ make <br>
+$ make test<br>
+$ make install </span><br>
+                  <br>
+
+The modules that are required are listed below, along with their URLs. The file part of the URL is current at the time of writing - you should install whatever is the latest version of the module.<br><br>
+
+XML::Simple Used for parsing BioMart configuration files.<br>
+<a href="http://search.cpan.org/~grantm/XML-Simple-2.13/" target="_blank">http://search.cpan.org/~grantm/XML-Simple-2.13/</a><br>
+<br>
+
+Spreadsheet:: WriteExcel used for exporting Excel spreadsheets <br> <a href="http://www.cpan.org/modules/by-module/Spreadsheet/Spreadsheet-WriteExcel-2.11.tar.gz" target="_blank">http://www.cpan.org/modules/by-module/Spreadsheet/Spreadsheet-WriteExcel-2.11.tar.gz</a> <br>
+<br>
+
+OLE::Storage_Lite Used for exporting Excel spreadsheets<br><a href="http://www.cpan.org/modules/by-module/OLE/OLE-Storage_Lite-0.14.tar.gz">http://www.cpan.org/modules/by-module/OLE/OLE-Storage_Lite-0.14.tar.gz</a> <br>
+<br>
+
+HTML:: Template Used by MartView <br>
+<a href="http://www.cpan.org/modules/by-module/HTML/HTML-Template-2.6.tar.gz" target="_blank">http://www.cpan.org/modules/by-module/HTML/HTML-Template-2.6.tar.gz</a> <br>
+<br>
+
+Mail::Mailer Used by MartView <br>
+<a href="http://www.cpan.org/modules/by-module/Mail/MailTools-1.67.tar.gz" target="_blank">http://www.cpan.org/modules/by-module/Mail/MailTools-1.67.tar.gz</a> <br>
+<br>
+
+IO::String Used for sequence handling <br>
+<a href="http://www.cpan.org/modules/by-module/IO/IO-String-1.06.tar.gz" target="_blank">http://www.cpan.org/modules/by-module/IO/IO-String-1.06.tar.gz</a><br>
+<br><br>
+
+
+If you intend to use BioMart with Oracle you will also need the DBD::Oracle modue:<br>
+<a href="http://search.cpan.org/dist/DBD-Oracle/" target="_blank">http://search.cpan.org/dist/DBD-Oracle/</a><br>
+<br>
+
+Please note that installation of this module depends on Oracle installation on the client machine.</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="bio" id="bio"></a> BioMart modules</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><ol>
+                    <br>
+                      
+                    <li>Log into the Sanger CVS server (using a password of  CVSUSER ): <br>
+                      <br>
+                      <span class="preformatted">$ cvs -d :pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/CVSmaster login </span></li>
+                    <br>
+                    <br>
+
+                    <li>Check the BioMart web code out of CVS:<br>
+    <br>
+
+                      <span class="preformatted">$ cvs -d :pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/CVSmaster \ <br>
+co -r  release-0_4 biomart-web </span></li>
+                    <br>
+                    <br>
+
+                    <li>Go to biomart-web directory<br>
+                      <br>
+                      <span class="preformatted">$ cd biomart-web</span></li>
+                    <br>
+                    <br>
+
+                    <li>Check the BioMart API out of CVS:<br>
+    <br>
+
+                      <span class="preformatted">$ cvs -d :pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/CVSmaster \ <br>
+co -r release-0_4 biomart-plib </span><br>
+                      <br>
+
+A listing of your biomart-web directory should now look something like: <br>
+                      <br>
+
+    <span class="preformatted">biomart-plib/  conf/  CVS/  htdocs/  modules/  perl/  util/</span></li>
+                    <br>
+                    <br>
+
+                    <li>Create logs directory<br>
+                      <br>
+                      <span class="preformatted">$ mkdir logs</span></li>
+                  </ol>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="con" id="con"></a> Configuration</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      
+                <td>
+<ol>
+                    <br>
+                    <li>Configure the server port:<br>
+    BioMart website comes with a default port 9999. If you want to change that<br>
+                      <br>
+                      <span class="preformatted">$ cd conf<br>
+    Open SiteDefs.pm and edit   $ENSEMBL_PORT</span></li>
+                    <br>
+                    <br>
+
+                    <li>For configuration of available BioMart databases see section BioMart
+registry in the <a href="ftp://ftp.ebi.ac.uk/pub/software/biomart/user-docs.pdf" target="_blank">user documentation</a>.</li>
+                  </ol>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="sta" id="sta"></a> Starting the BioMart website</nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><ol>
+                    <br>
+                      
+                    <li>Start the web server:<br>
+                          <br>
+
+ <span class="preformatted">$ /usr/local/apache/bin/httpd -d biomart-web </span><br>
+                      <br>
+
+ You should now be able to point a web-browser at your server and see the BioMart homepage.<br>
+ <br>
+ <span class="pbold">NB.</span> BioMart server stores all the dataset configuration locally on the
+first startup to speed up subsequent re-starts. If you want to re-fresh
+dataset configuration you have to remove the local configuration file
+prior to starting the server as follows:
+
+ <br>
+ <br>
+ <span class="preformatted">rm biomart-web/conf/martconf.packed</span></li>
+                  </ol>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td width="100%" >&nbsp;</td>
+                      <td class = "tableborder" nowrap><span  class = "green"><nobr><a name="sto" id="sto"></a> Stopping the BioMart website </nobr></span></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><ol>
+                    <br>
+                      
+                    <li>To stop the web server:<br>
+                          <br>
+
+                      <span class="preformatted">$ kill `cat biomart-web/logs/httpd.pid` </span><br>
+                      <br>
+
+Note the punctuation marks are backticks and not singlequotes. </li>
+                    <br>
+                    <br>
+
+                    <li>Troubleshooting <br>
+                      <br>
+The best way of troubleshooting is to watch the Apache error_log and look for exactly what the problem is. You can do this with the command: <br>
+                      <br>
+
+                      <span class="preformatted">$ tail -f biomart-web/logs/error_log</span><br>
+                      <br>
+
+It is often obvious what the error is, especially if it is due to file permissions or a missing Perl module. If you have email errors turned on, then you will be receiving some additional information via that route.
+</li>
+                  </ol>
+</td>
+                    </tr>
+                  </table>
+                  
+            <div align="right"><a href="#0"><img src="images/arrow_up2.gif" width="19" height="21" border="0"></a><br />
+                  </div><br />
+				  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="right"><a href="javascript:history.go(-1);" class="small_list_underline" title="Go Back">&lt;&lt;&lt;</a></td>
+                    </tr>
+                  </table>
+                  <br />
+                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <!-- InstanceEndEditable --></td>
+                	
+          <td width="1%"><img alt="Image" src="images/trans.gif" width="6" height="8" /></td>
+					
+          <td width="1%" background="images/vert.gif"><img alt="Image" src="images/trans.gif" height="3" width="3" /></td>
+					
+          <td width="1%"><img alt="Image" src="images/trans.gif" height="8" width="6" /></td>
+					<td valign="top"><!-- InstanceBeginEditable name="rightnav" -->&nbsp;<!-- InstanceEndEditable --></td>
+				</tr>
+				<tr>
+					<td width="100%" class="tablebody" background="images/hor.gif" height="3"><img alt="Image" src="images/trans.gif" height="3" width="3" /></td>
+					<td colspan="5"><img alt="Image" src="images/trans.gif" height="1" width="1" /></td>
+				</tr>
+			</table></td>
+		
+    <td width="1%"><img alt="Image" src="images/trans.gif" height="8" width="20" /> </td>
+	</tr>
+</table>
+<div align="center">Page last updated: <script language="javascript">
+<!-- 
+document.write(document.lastModified);   
+// -->
+</script></div>
+
+
+		
+</body>
+<!-- InstanceEnd --></html>  

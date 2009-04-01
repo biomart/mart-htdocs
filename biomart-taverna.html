@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<title>Notes on configuring biomart-web as a Taverna service</title>
+</head>
+
+<body>
+
+<h1>Notes on configuring biomart-web as a Taverna service</h1>
+
+<p><b>Nassib Nassar (RENCI)<br>
+August 4, 2006</b></p>
+
+<p>These notes document the experience of setting up biomart-web as a
+Taverna service.</p>
+
+<p>This is intended as an evolving document.  Please send additions
+and updates to the BioMart team for inclusion here.</p>
+
+<h2>1. Prerequisites</h2>
+
+<p>This document assumes the following software versions:</p>
+
+<ul>
+<li>biomart-web 0.4
+<li>Taverna 1.4
+</ul>
+
+<p>It is assumed that biomart-web and Taverna are installed, and that
+biomart-web houses an existing mart.</p>
+
+<h2>2. Configure default mart registry</h2>
+
+<p>Biomart's default mart registry, <tt>defaultMartRegistry.xml</tt>,
+uses an optional element called <tt>virtualSchema</tt>.  Taverna
+expects this element always to be present, for example:</p>
+
+<ul>
+<pre>
+&#60;?xml version="1.0" encoding="UTF-8"?&#62;
+&#60;!DOCTYPE MartRegistry&#62;
+&#60;MartRegistry&#62;
+	<font color="red"><b>&#60;virtualSchema name="default"&#62;</b></font>
+		&#60;MartDBLocation
+			name            = "uniprot"
+	                displayName     = "Uniprot"
+	                databaseType    = "mysql"
+	                host            = "localhost"
+	                port            = "3306"
+	                database        = "uniprot"
+	                schema          = "uniprot"
+	                user            = "mysqluser"
+	                password        = "mysqlpassword"
+	                visible         = "1"
+	        	default         = ""
+	        	includeDatasets = ""
+	        	martUser        = ""
+		/&#62;
+	<font color="red"><b>&#60;/virtualSchema&#62;</b></font>
+&#60;/MartRegistry&#62;
+</pre>
+</ul>
+
+<p>If <tt>virtualSchema</tt> is missing, Taverna will not allow the
+biomart service to be added to a workflow model but otherwise does not
+give an error or explanation.</p>
+
+<h2>3. Add mart as a default service in Taverna</h2>
+
+<p>To configure Taverna so that it will include your mart in its
+default list of available services, edit Taverna's
+<tt>mygrid.properties</tt> file and add the new mart to the
+<tt>taverna.defaultmartregistry</tt> property.</p>
+
+<p>The default setting is:</p>
+
+<ul>
+<pre>
+taverna.defaultmartregistry = http://www.biomart.org/biomart
+</pre>
+</ul>
+
+<p>For example, to add a mart at <tt>www.renci.org</tt> running on the
+default port <tt>9999</tt>:</p>
+
+<ul>
+<pre>
+taverna.defaultmartregistry = http://www.biomart.org/biomart<font color="red"><b>,\
+                              http://www.renci.org:9999/biomart</b></font>
+</pre>
+</ul>
+
+<p>Note the <tt><font color="red"><b>,\</b></font></tt> on the first
+line.  After making these changes, restart Taverna and you should then
+see your mart listed in the "Available services" window.</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

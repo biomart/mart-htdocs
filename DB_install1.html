@@ -1,0 +1,198 @@
+<html><!-- InstanceBegin template="/Templates/biomart_standalone.dwt" codeOutsideHTMLIsLocked="false" -->	
+	<head> 
+		<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="Description" content="BioMart is a simple and robust data integration system for large scale data querying. It has been designed to provide researchers with an easy and interactive access to both the wealth of data available on the Internet and for in house data integration.">
+<meta name="keywords" content="BioMart, DATABASE, SEARCHES, protein">
+
+<title>BioMart - Data </title>
+ <script language="javascript" type="text/javascript">
+<!--
+var currentTab="Documentation";
+// -->
+</script>
+<!-- InstanceEndEditable -->
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="head" -->
+
+
+
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="include/stylesheet.css" type="text/css" />
+ <script language="javascript" type="text/javascript">
+	function colourTab(){
+		if((document.getElementById(currentTab))){
+			(document.getElementById(currentTab)).className='menuh';
+		}
+	}
+
+	function rollOver(overTab){
+		if(currentTab!=overTab){
+			(document.getElementById(overTab)).className='menuh';
+		}
+	}
+	function rollOut(overTab){
+		if(currentTab!=overTab){
+			(document.getElementById(overTab)).className='menu';
+		}
+	}
+
+</script>
+
+</head>
+<body style="margin: 0px;" onLoad="colourTab()" >
+
+<div style=" width:100%; height:15%;">
+<table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" height="100%" align="left">
+<table height="100%" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="35%" align="left" valign="middle">
+			<a href="index.html">
+			<img style="margin-left:10px;" src="/martview/images/biomart_logo_big.gif" alt="EBI Home Page" border="0" />
+			</a>
+		</td>
+		
+		<td width="65%" align="right" valign="middle">
+			<table border="0" valign="middle" cellpadding="0" cellspacing="3" height="100%" width="700">
+				<tr>
+				
+				<td align="center" valign="middle" width="14%">
+					<div class="menu" id="BioMart Home" onClick="location='/martview/../index.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">HOME</div> 
+				</td>
+
+				<td align="center" valign="middle" width="14%">
+					<div    class="menu"  id="Query" onClick="location='/biomart/martview'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">MARTVIEW</div>    
+				</td>
+				
+				<td align="center" valign="middle" width="14%">
+					<div     class="menu" id="Service" onClick="location='/martview/../martservice.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">MARTSERVICE</div>
+				</td>
+			
+				<td align="center" valign="middle" width="14%">
+					<div   class="menuh"  id="Documentation" onClick="location='/martview/../install.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">DOCS</div> 
+				</td>
+			
+				<td align="center" valign="middle" width="14%">
+					<div   class="menu"  id="Contact" onClick="location='/martview/../contact.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">CONTACT</div> 
+				</td>
+			
+				<td align="center" valign="middle" width="14%">
+					<div   class="menu"  id="News" onClick="location='/martview/../news.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">NEWS</div> 
+				</td>
+				
+				<td align="center" valign="middle" width="14%">
+					<div    class="menu"  id="Credits" onClick="location='/martview/../credits.html'" onmouseover="rollOver(this.id)" onMouseout="rollOut(this.id)">CREDITS</div> 
+				</td>
+			
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="mart_header" style=" width:100%; height:85%;">
+
+<table class="tablehead" width="100%" height="5" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td class="td_class" width="100%" height="20" align="center"><!-- InstanceBeginEditable name="topnav" --><nobr></nobr><!-- InstanceEndEditable --></td>
+              </tr>
+</table>
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="td_class" colspan="6" class="tablebody" height="6"><img alt="Image" src="images/trans.gif" width="1" height="6" /></td>
+	</tr>
+	<tr>
+		
+    <td class="td_class"  width="1%" height="20"><img alt="Image" src="images/trans.gif" height="20" width="20" /></td>
+		
+    <td class="td_class" width="1%" height="20" valign="top" align="left" bgcolor="#ffffff"><img alt="Image" src="images/trans.gif" width="20" height="20" /></td>
+		
+    <td class="td_class" width="100%">&nbsp;</td>
+		
+    <td class="td_class" width="1%" colspan="2"><img alt="Image" src="images/trans.gif" height="8" width="20" /></td> 
+	</tr>
+	<tr>
+		
+    <td class="td_class"  width="1%" valign="top" align="left"><img alt="Image" src="images/trans.gif" width="20" height="30" /></td>
+    		
+    <td class="td_class" width="1%">&nbsp;</td>
+          	
+    <td class="td_class" align="left" valign="top" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+                	
+          <td class="td_class" width="100%" valign="top" nowrap><!-- InstanceBeginEditable name="contents" --><table width="560" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td class = "tablegreen" nowrap><nobr>&nbsp;<span class = "whitetitle">BioMart</span>&nbsp;</nobr></td>
+                      <td class="td_class"  width="100%"><nobr class="pagetitle">&nbsp;Data </nobr></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="td_class" height="3" background="images/hor.gif"><img src="images/trans.gif" width="25" height="3"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="td_class"><br />
+                        
+						The data from individual BioMart instances is provided and maintained by individual BioMart users.
+                                                Below are some pointers to publicly available dumps of BioMart databases:  <br><br>
+
+
+<li> <a href="ftp://ftp.ensembl.org/pub/current_mart/data/mysql/">Ensembl</a> (MySQL)</li>
+<li><a href="ftp://ftp.ebi.ac.uk/pub/databases/biomart/current/">Uniprot, MSD</a> (MySQL)</li>
+<li><a href="ftp://ftp.wormbase.org/pub/wormbase/mirror/database_tarballs">WormBase</a> (MySQL)</li>
+<li><a href="ftp://ftp.ebi.ac.uk/pub/databases/biomart/archive/flybase_mart">FlyBase prototype</a> (Postgres)</li>
+
+<br><br>
+
+
+You can also build a BioMart db with your own data. If you want to learn how to build one on your own please refer to the <a href="user-docs.pdf">users manual </a><br />
+<br />
+</td></tr>
+                  </table>
+                  <br /><br /><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="td_class" align="right"><a href="javascript:history.go(-1);" class="small_list_underline" title="Go Back">&lt;&lt;&lt;</a></td>
+                    </tr>
+                  </table>
+                  <br />
+                    <!-- InstanceEndEditable --></td>
+                	
+          <td class="td_class" width="1%"><img alt="Image" src="images/trans.gif" width="6" height="8" /></td>
+					
+          <td class="td_class" width="1%" background="images/vert.gif"><img alt="Image" src="images/trans.gif" height="3" width="3" /></td>
+					
+          <td class="td_class" width="1%"><img alt="Image" src="images/trans.gif" height="8" width="6" /></td>
+					<td class="td_class" valign="top"><!-- InstanceBeginEditable name="rightnav" -->&nbsp;<!-- InstanceEndEditable --></td>
+				</tr>
+				<tr>
+					<td width="100%" class="tablebody" background="images/hor.gif" height="3"><img alt="Image" src="images/trans.gif" height="3" width="3" /></td>
+					<td class="td_class" colspan="5"><img alt="Image" src="images/trans.gif" height="1" width="1" /></td>
+				</tr>
+			</table></td>
+		
+    <td class="td_class" width="1%"><img alt="Image" src="images/trans.gif" height="8" width="20" /> </td>
+	</tr>
+</table>
+<div align="center">Page last updated: <script language="javascript">
+<!-- 
+document.write(document.lastModified);   
+// -->
+</script></div>
+
+
+</div>		
+</body>
+<!-- InstanceEnd --></html>  

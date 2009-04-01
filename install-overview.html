@@ -1,0 +1,884 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Syed Haider">
+	<META NAME="CREATED" CONTENT="20080513;11455900">
+	<META NAME="CHANGEDBY" CONTENT="Syed Haider">
+	<META NAME="CHANGED" CONTENT="20080513;12143900">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		P.text-body-indent-western { margin-left: 0.79in; margin-top: 0.08in; margin-bottom: 0.08in; font-family: "DejaVu Serif Condensed", serif; font-size: 10pt; widows: 2; orphans: 2; page-break-before: auto; page-break-after: auto }
+		P.text-body-indent-cjk { margin-left: 0.79in; margin-top: 0.08in; margin-bottom: 0.08in; widows: 2; orphans: 2; page-break-before: auto; page-break-after: auto }
+		P.text-body-indent-ctl { margin-left: 0.79in; margin-top: 0.08in; margin-bottom: 0.08in; widows: 2; orphans: 2; page-break-before: auto; page-break-after: auto }
+		H1 { margin-top: 0.16in; margin-bottom: 0.08in; background: transparent; text-align: justify; widows: 2; orphans: 2; page-break-before: auto }
+		H1.western { font-family: "DejaVu Serif Condensed", serif; font-size: 14pt }
+		H1.cjk { font-family: "DejaVu LGC Sans"; font-size: 13pt }
+		H1.ctl { font-family: "DejaVu LGC Sans"; font-size: 13pt }
+		H2 { margin-top: 0.16in; margin-bottom: 0.16in; background: transparent; text-align: justify; widows: 2; orphans: 2; page-break-before: auto }
+		H2.western { font-family: "DejaVu Serif Condensed", serif; font-size: 13pt; font-style: oblique; font-weight: medium }
+		H2.cjk { font-family: "DejaVu LGC Sans"; font-size: 14pt; font-style: italic; font-weight: medium }
+		H2.ctl { font-family: "DejaVu LGC Sans"; font-size: 14pt; font-style: italic; font-weight: medium }
+		H3 { margin-top: 0.16in; margin-bottom: 0.16in; background: transparent; text-align: justify; widows: 2; orphans: 2; page-break-before: auto }
+		H3.western { font-family: "DejaVu Serif Condensed", serif; font-size: 12pt; font-style: normal; font-weight: medium }
+		H3.cjk { font-family: "DejaVu LGC Sans"; font-style: italic; font-weight: medium }
+		H3.ctl { font-family: "DejaVu LGC Sans"; font-style: italic; font-weight: medium }
+		BLOCKQUOTE { margin-left: 0.63in; margin-right: 0.39in; margin-bottom: 0in; background: #e6e6ff; border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.1in; padding-right: 0in; color: #000000 }
+		BLOCKQUOTE.western { font-family: "FreeMono", monospace; font-size: 10pt; font-style: normal; font-weight: bold }
+		BLOCKQUOTE.cjk { font-weight: bold }
+		BLOCKQUOTE.ctl { font-weight: bold }
+		P.marginalia-western { margin-left: 0.63in; margin-top: 0.08in; margin-bottom: 0.08in; background: #ffff99; border: 1px solid #ff0000; padding: 0.1in; font-family: "DejaVu Serif Condensed", serif; font-size: 10pt; font-style: normal; page-break-inside: avoid; page-break-before: auto; page-break-after: auto }
+		P.marginalia-cjk { margin-left: 0.63in; margin-top: 0.08in; margin-bottom: 0.08in; background: #ffff99; border: 1px solid #ff0000; padding: 0.1in; page-break-inside: avoid; page-break-before: auto; page-break-after: auto }
+		P.marginalia-ctl { margin-left: 0.63in; margin-top: 0.08in; margin-bottom: 0.08in; background: #ffff99; border: 1px solid #ff0000; padding: 0.1in; page-break-inside: avoid; page-break-before: auto; page-break-after: auto }
+		TD P { margin-bottom: 0in }
+		TD P.western { font-family: "DejaVu Serif Condensed", serif; font-size: 8pt }
+		H4 { margin-top: 0.16in; margin-bottom: 0.16in; background: transparent; text-align: justify; widows: 2; orphans: 2; page-break-before: auto }
+		H4.western { font-family: "DejaVu Serif Condensed", serif; font-size: 10pt; font-style: oblique; font-weight: medium }
+		H4.cjk { font-family: "DejaVu LGC Sans"; font-size: 11pt; font-style: italic; font-weight: medium }
+		H4.ctl { font-family: "DejaVu LGC Sans"; font-size: 11pt; font-style: italic; font-weight: medium }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1 CLASS="western" ALIGN=LEFT><FONT SIZE=3 STYLE="font-size: 13pt">BioMart
+0.7 Quick Install Guide</FONT></H1>
+<H1 CLASS="western">1. Installing BioMart</H1>
+<P CLASS="text-body-indent-western">The BioMart components are
+distributed in two separate packages.</P>
+<P CLASS="text-body-indent-western"><I>biomart-perl</I> contains the
+Perl API and all the BioMart applications that depend on it, such as
+MartView, MartService, MartURLAccess and DAS Annotation Server (if
+configured).</P>
+<P CLASS="text-body-indent-western"><I>martj</I> contains the Java
+API and all the BioMart applications that are written in Java, such
+as MartEditor, MartShell, MartExplorer and MartBuilder.</P>
+<H2 CLASS="western">1.1 Downloading <SPAN STYLE="font-style: normal">martj</SPAN></H2>
+<H3 CLASS="western">1.1.1 Binary distribution</H3>
+<P CLASS="text-body-indent-western">The best way to obtain <I>martj</I><SPAN STYLE="font-style: normal">
+is to download one of the pre-compiled binary distributions from
+<A HREF="http://www.biomart.org/">http://www.biomart.org/</A>. </SPAN>
+</P>
+<P CLASS="text-body-indent-western">The <A HREF="ftp://anonymous@ftp.ebi.ac.uk/pub/software/biomart/martj_current/martj-bin.zip"><I>martj-bin.zip</I></A>
+distribution is for Windows users, and contains the Java API and all
+the Java-based BioMart applications. The <I>bin</I> folder contains a
+number of <I>.bat</I> scripts for launching the applications. You can
+unpack it using WinZip or a similar application.</P>
+<P CLASS="text-body-indent-western">The <A HREF="ftp://anonymous@ftp.ebi.ac.uk/pub/software/biomart/martj_current/martj-bin.tgz"><I>martj-bin.tgz</I></A><A HREF="ftp://anonymous@ftp.ebi.ac.uk/pub/software/biomart/martj_current/martj-bin.tgz">
+</A>distribution is identical to the <I>martj-bin.zip</I>
+distribution, but is intended for Unix and Linux users. Instead of
+<I>.bat</I> scripts, it contains a number of <I>.sh</I> scripts which
+perform equivalent tasks. You can unpack it using:</P>
+<BLOCKQUOTE CLASS="western" STYLE="text-align: justify">tar -zxvf
+martj-bin.tgz</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">The <A HREF="ftp://@ftp.ebi.ac.uk/pub/software/biomart/martj_current/martj-bin.dmg"><I>martj-bin.dmg</I></A>
+distribution is for MacOSX users, and contains bundles in the <I>bin</I>
+folder for each of the various Java-based BioMart applications. The
+<I>bin</I> folder also contains the MartShell application <I>.command</I>
+script, and the <I>lib</I> and <I>data</I> folders contain the files
+that MartShell depends on. The <I>.dmg</I> image file will
+automatically unpack itself when double-clicked.</P>
+<H3 CLASS="western" STYLE="font-style: normal">1.1.2 Source
+distribution</H3>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">The
+source code for </SPAN>martj<SPAN STYLE="font-style: normal"> is
+available for download via CVS, but you will need the </SPAN>ant<SPAN STYLE="font-style: normal">
+tool installed if you subsequently wish to compile it. </SPAN>ant<SPAN STYLE="font-style: normal">
+is available from <A HREF="http://ant.apache.org/">http://ant.apache.org/</A>.
+Download and install it as per the instructions on that website.</SPAN></P>
+<P CLASS="text-body-indent-western">To check <I>martj</I> out from
+CVS, you need to type the following commands on the command line
+prompt. The password you need to enter when prompted is <FONT FACE="FreeMono, monospace"><B>CVSUSER</B></FONT>.</P>
+<BLOCKQUOTE CLASS="western">cvs -d
+:pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/biomart login</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western"><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">cvs -d
+:pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/biomart \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">	co -r release-0_7 martj</BLOCKQUOTE>
+<P CLASS="text-body-indent-western"><BR><BR>
+</P>
+<P CLASS="text-body-indent-western">To compile <I>martj</I><SPAN STYLE="font-style: normal">
+using </SPAN><I>ant</I><SPAN STYLE="font-style: normal">, change into
+the </SPAN><I>martj</I><SPAN STYLE="font-style: normal"> directory
+created by the commands above and type:</SPAN></P>
+<BLOCKQUOTE CLASS="western">ant jar</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">This will create the <I>martj.jar</I>
+file inside the <I>build</I> folder. All other JAR files which the
+Java-based BioMart applications depend on can be found in the <I>lib</I>
+folder.</P>
+<H2 CLASS="western">1.2 Downloading <SPAN STYLE="font-style: normal">biomart-perl</SPAN></H2>
+<P CLASS="marginalia-western">There is no binary distribution for
+<I>biomart-perl</I>. It is only available as a source distribution
+from CVS.</P>
+<P CLASS="text-body-indent-western">To check <I>biomart-perl</I><SPAN STYLE="font-style: normal">
+out from CVS, you need to type the following commands on the command
+line prompt. The password you need to enter when asked is </SPAN><FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>CVSUSER</B></SPAN></FONT><SPAN STYLE="font-style: normal">.</SPAN></P>
+<BLOCKQUOTE CLASS="western">cvs -d
+:pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/biomart login</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western"><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">cvs -d
+:pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/biomart \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">	co -r release-0_7 biomart-perl</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">No compilation is required, but
+it will need to be configured before you can use it. For details on
+how to configure it, please refer to the section on installing
+<I>biomart-perl</I>.</P>
+<H2 CLASS="western">1.3 Installing <SPAN STYLE="font-style: normal">martj</SPAN></H2>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">You
+need to have Java 1.3 or later installed. You can get Java from
+<A HREF="http://java.sun.com/">http://java.sun.com/</A>. </SPAN>
+</P>
+<P CLASS="marginalia-western"><I>martj</I> has been tested with Java
+1.3, 1.4 and 1.5.</P>
+<P CLASS="marginalia-western">If you attempt to run any <I>martj</I><SPAN STYLE="font-style: normal">
+component </SPAN>on Java 1.6 or higher, and experience problems,
+please try the same series of actions with Java 1.5 before reporting
+a bug.</P>
+<P CLASS="text-body-indent-western"><I>martj</I><SPAN STYLE="font-style: normal">
+requires no further installation, except if you wish to use marts
+other than the ones defined by default. To do so requires you to
+modify the Registry file, which is discussed elsewhere in this
+document.</SPAN></P>
+<P CLASS="marginalia-western"><SPAN STYLE="font-style: normal">It is
+important that you do not modify the directory structure inside the
+</SPAN><I>martj</I><SPAN STYLE="font-style: normal"> folder, or move
+or copy any of the scripts from the </SPAN><I>bin</I><SPAN STYLE="font-style: normal">
+folders to other locations. Running these scripts from other
+locations will not work.</SPAN></P>
+<H2 CLASS="western">1.4 Installing <SPAN STYLE="font-style: normal">biomart-perl</SPAN></H2>
+<H3 CLASS="western">1.4.1 Prerequisites</H3>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">You
+need to have Perl version 5.6.0 or later installed first. You can get
+the latest version of Perl from <A HREF="http://www.perl.org/">http://www.perl.org/</A>.</SPAN></P>
+<P CLASS="marginalia-western"><SPAN STYLE="font-style: normal">It is
+important that you do not modify the directory structure inside the
+</SPAN><I>biomart-perl</I><SPAN STYLE="font-style: normal"> folder,
+or move or copy any of the files within it to other locations.</SPAN></P>
+<P CLASS="text-body-indent-western">biomart-perl<SPAN STYLE="font-style: normal">
+depends on a number of Perl modules. When you run the configuration
+steps detailed elsewhere in this document it will tell you if any of
+the ones it needs are missing so the best plan is to run the
+configure.pl straight away from your </SPAN><I>biomart-perl </I><SPAN STYLE="font-style: normal">directory
+and install any missing modules:</SPAN></P>
+<BLOCKQUOTE CLASS="western" STYLE="font-style: normal; text-align: justify">
+perl bin/configure.pl -r conf/registryURLPointer.xml</BLOCKQUOTE>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">The
+easiest way to install these missing modules is to use CPAN shell.
+Unless you are knowledgeable about CPAN and know how to do otherwise,
+modules should be installed by the root user on Linux/Unix systems,
+or by the Administrator on MacOSX/Windows systems.</P>
+<P CLASS="text-body-indent-western" ALIGN=JUSTIFY STYLE="font-style: normal">
+For each module reported as missing by the configuration step, type:</P>
+<BLOCKQUOTE CLASS="western" STYLE="text-align: justify">cpan -i
+Module::Name</BLOCKQUOTE>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">You
+should replace </SPAN><FONT FACE="FreeMono, monospace"><B>Module::Name</B></FONT><SPAN STYLE="font-style: normal">
+with the name of the module you are attempting to install, ideally by
+cut and pasting from the output from configure.pl. Read the questions
+CPAN asks during installation thoroughly, and answer </SPAN><FONT FACE="FreeMono, monospace"><I><B>yes</B></I></FONT><SPAN STYLE="font-style: normal">
+when it asks you if you want to install missing dependencies. It is
+usually fine to accept the default responses for almost all questions
+it asks.</SPAN></P>
+<P CLASS="text-body-indent-western">For reference, the list of
+required CPAN modules required at the time of writing is shown below.
+Version numbers are those that have been tested against, but other
+more recent versions may also work.</P>
+<DIV ALIGN=RIGHT>
+	<TABLE WIDTH=515 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=3 CELLSPACING=0 BGCOLOR="#ffcc99" STYLE="page-break-after: auto; page-break-inside: auto">
+		<COL WIDTH=103>
+		<COL WIDTH=252>
+		<COL WIDTH=140>
+		<THEAD>
+			<TR BGCOLOR="#ff9966" VALIGN=TOP>
+				<TD WIDTH=103>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Dependency</B></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Module
+					name</B></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Module
+					version</B></FONT></FONT></P>
+				</TD>
+			</TR>
+		</THEAD>
+		<TBODY>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">XML-DOM</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.44" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.44</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">OLE-Storage_Lite</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="0.14" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">0.14</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Exception-Class</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.23" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.23</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">libwww-perl</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">5.8</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Log-Log4perl</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.05" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.05</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Test-Exception</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">0.24</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">DBI
+					and relevant DBD drivers</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.53</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">API</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Digest::SHA</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="5.44" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">5.44</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">IO::Compress::Gzip</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="2.004" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Number-Format</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.51" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.51</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Template-Toolkit</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="2.14" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">2.14</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Template-Plugin-Number-Format</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.01" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.01</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">CGI-Session</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="4.14" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">4.14</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Readonly</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="1.13" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.13</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=103 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252 VALIGN=TOP>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">List-MoreUtils</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140 VALIGN=BOTTOM SDVAL="0.22" SDNUM="1033;">
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">0.22</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=103>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">SpreadSheet-WriteExcel</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">2.17</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=103>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">IO-Compress-Zlib</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">2.003</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=103>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Website</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=252>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">SOAP-Lite</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=140>
+					<P CLASS="western" ALIGN=RIGHT><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">0.710.08</FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DIV>
+<H4 CLASS="western">1.4.1.1 Apache installation for MartView</H4>
+<P CLASS="marginalia-western">All references to MartView in this
+document that relate to configuration and maintenance equally apply
+to and affect MartService, as the two are part of the same
+application.</P>
+<P CLASS="text-body-indent-western">If you are going to be running a
+MartView/MartService/DAS server, you will also need to have an Apache
+web-server installed. This can be downloaded from
+<A HREF="http://httpd.apache.org/">http://httpd.apache.org/</A>, and
+should be installed as per the guidelines on that website. You do not
+need to configure Apache to be used with BioMart, as the BioMart
+configuration scripts will handle that for you.</P>
+<P CLASS="text-body-indent-western">MartView works fine with all
+versions of Apache 1.3 or higher, including Apache 2.0 or higher.</P>
+<P CLASS="text-body-indent-western">MartView requires a few Apache
+extension modules to be installed. It does not matter if they are
+compiled into Apache or provided as dynamic modules. If you are
+missing any of them, the website where you can download them is
+listed beside each one. 
+</P>
+<DIV ALIGN=RIGHT>
+	<TABLE WIDTH=515 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=3 CELLSPACING=0 BGCOLOR="#ffcc99" STYLE="page-break-after: auto; page-break-inside: avoid">
+		<COL WIDTH=92>
+		<COL WIDTH=115>
+		<COL WIDTH=288>
+		<THEAD>
+			<TR BGCOLOR="#ff9966" VALIGN=TOP>
+				<TD WIDTH=92>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Apache
+					version</B></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=115>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Module
+					name</B></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=288>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Module
+					website</B></FONT></FONT></P>
+				</TD>
+			</TR>
+		</THEAD>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">1.3,
+					1.4</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=115>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">mod_gzip</FONT></FONT></P>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 6pt"><I>(optional,
+					improves performance)</I></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=288>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><A HREF="http://sourceforge.net/projects/mod-gzip/">http://sourceforge.net/projects/mod-gzip/</A>
+					</FONT></FONT>
+					</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92>
+					<P CLASS="western"><BR>
+					</P>
+				</TD>
+				<TD WIDTH=115>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">mod_perl</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=288>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><A HREF="http://perl.apache.org/">http://perl.apache.org/</A></FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">2.0
+					or higher</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=115>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">mod_deflate</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=288>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">Part
+					of the Apache distribution.</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92>
+					<P CLASS="western"><BR>
+					</P>
+				</TD>
+				<TD WIDTH=115>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt">mod_perl</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=288>
+					<P CLASS="western"><FONT FACE="DejaVu Serif Condensed, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><A HREF="http://perl.apache.org/">http://perl.apache.org/</A></FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DIV>
+<P CLASS="text-body-indent-western">MartView has been designed to
+work best with Apache 2.0 or higher but Apache 2.0 is not a
+prerequisite. 
+</P>
+<P CLASS="marginalia-western">It is highly recommended that you
+install the appropriate compression module for Apache before running
+MartView. If you do not, then MartView is likely to be very slow.</P>
+<P CLASS="marginalia-western">For Apache 2.0 or higher, use
+<I>mod_deflate</I>. For Apache versions before 2.0, use <I>mod_gzip</I>.
+Details are in the table above.</P>
+<P CLASS="text-body-indent-western">The Perl API and MartView
+configuration scripts check which Apache modules are available by
+using <I>apxs</I> (Apache 1.3/1.4) or <I>apxs2</I> (Apache 2.0+). It
+requires this tool to live in the same location as the Apache binary
+(usually called <I>apache</I>, <I>apache2, </I>or <I>httpd</I>). If
+you have installed a binary distribution of Apache, you may also need
+to install the Apache development tools to make <I>apxs</I>/<I>apxs2</I>
+available.</P>
+<P CLASS="text-body-indent-western">Other Apache modules are also
+used by MartView but these are all available with the default Apache
+installation and so you should not need to worry about having to
+install them.</P>
+<H4 CLASS="western">1.4.1.2 Apache and ModPerl quick setup</H4>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">If you
+do not already have Apache and ModPerl installed on your system then
+you can follow these steps to set them up. 
+</P>
+<P CLASS="marginalia-western">These steps assume a Unix/Linux-based
+system. For other operating systems, please refer to the Apache and
+ModPerl websites for instructions.</P>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">For
+the purposes of these instructions it is assumed that you will be
+installing the latest versions of Apache and ModPerl that were
+available at the time of writing (Apache 2.2.3 and ModPerl 2.0.2). 
+</P>
+<P CLASS="marginalia-western">BioMart software does not depend on
+specific versions of Apache or ModPerl. It can use other versions if
+required but these instructions are only valid for the versions
+specified.</P>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">First
+you will need to create a directory where you can work. In our
+example we will install Apache in <FONT FACE="FreeMono"><B>/</B></FONT><FONT FACE="FreeMono, monospace"><B>home/biomart/apache</B></FONT>.
+</P>
+<BLOCKQUOTE CLASS="western">mkdir /home/biomart/apache</BLOCKQUOTE>
+<P CLASS="marginalia-western" STYLE="font-style: normal">You will
+need to substitute your directory for this example location in all
+the commands and explanations in this section.</P>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">Next
+you need to download, unpack, and build Apache inside this directory.</P>
+<BLOCKQUOTE CLASS="western">cd /home/biomart/apache</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">mkdir source</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">cd source</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">wget
+http://www.apache.org/dist/httpd/httpd-2.2.3.tar.gz</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">tar zxvf httpd-2.2.3.tar.gz</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">cd httpd-2.2.3</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">./configure \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">	--enable-deflate \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">	--prefix=/home/biomart/apache \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">make install</BLOCKQUOTE>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">Apache
+has now been built and configured. Your Apache installation path is 
+<FONT FACE="FreeMono"><B>/home/biomart/apache</B></FONT><FONT FACE="FreeMono, monospace"><B>/bin</B></FONT>.
+You will need this when configuring <I>biomart-perl</I> to use this
+copy of Apache.</P>
+<P CLASS="text-body-indent-western" STYLE="font-style: normal">The
+last step is to download and install ModPerl.</P>
+<P CLASS="marginalia-western">Note for ModPerl you may need to
+upgrade your Perl CGI module to the latest version (the module name
+is <FONT FACE="FreeMono">CGI</FONT>). You can use the same technique
+to upgrade this as you used to install the other Perl module
+dependencies for <I>biomart-perl</I>. 
+</P>
+<P CLASS="marginalia-western">This only applies when using ModPerl
+2.0 or higher, as per this example. You will know if you need to
+upgrade if errors show in the Apache error log that refer to
+<FONT FACE="FreeMono">Apache/Response</FONT>.</P>
+<BLOCKQUOTE CLASS="western">cd /home/biomart/apache/source</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">wget
+http://perl.apache.org/dist/mod_perl-2.0.2.tar.gz</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">tar zxvf mod_perl-2.0.2.tar.gz</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">cd mod_perl-2.0.2</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">perl Makefile.PL \</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">	PREFIX=/home/biomart/apache \
+	MP_APXS=/home/biomart/apache/bin/apxs</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">make install</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">Now ModPerl has been installed,
+the setup of Apache and ModPerl is complete.</P>
+<H3 CLASS="western">1.4.2 Setting the Registry</H3>
+<P CLASS="text-body-indent-western">The BioMart Perl API and MartView
+allow users to make queries against a predetermined list of marts,
+defined in a Registry file. When using the Perl API, this registry
+file can be located anywhere the user requires. 
+</P>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">However,
+when using MartView, the registry file to be used must be located in
+the </SPAN><I>conf</I><SPAN STYLE="font-style: normal"> folder of the
+</SPAN><I>biomart-perl</I><SPAN STYLE="font-style: normal">
+installation. </SPAN>
+</P>
+<P CLASS="text-body-indent-western"><SPAN STYLE="font-style: normal">Registry
+files are in XML format. You will find a number of example registry
+files already in the </SPAN><I>conf </I><SPAN STYLE="font-style: normal">folder
+after you download and unpack </SPAN><I>biomart-perl</I><SPAN STYLE="font-style: normal">.
+They can be extended to widen the selection of marts to include
+others available publicly, or they can be adapted to serve your own
+local marts.</SPAN></P>
+<P CLASS="text-body-indent-western" ALIGN=JUSTIFY STYLE="font-style: normal">
+The structure of the registry file is discussed elsewhere in this
+document.</P>
+<H3 CLASS="western">1.4.3 Configuring</H3>
+<H4 CLASS="western">1.4.3.1 Configuring the BioMart Perl API</H4>
+<P CLASS="text-body-indent-western">Configuration of the Perl API
+requires a single step. Change into the <I>biomart-perl</I>
+directory, then type:</P>
+<BLOCKQUOTE CLASS="western">perl bin/configure.pl -r
+conf/registryURLPointer.xml</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">where <FONT FACE="FreeMono, monospace"><B>registryURLPointer.xml</B></FONT>
+is the registry file you wish to use from the <FONT FACE="FreeMono, monospace"><B>conf</B></FONT>
+folder.</P>
+<P CLASS="text-body-indent-western">The first question the configure
+script will ask is:</P>
+<BLOCKQUOTE CLASS="western">Do you want to install in API only mode
+[y/n] [n]:</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">Type <FONT FACE="FreeMono, monospace"><B>y
+to install the API only</B></FONT>. 
+</P>
+<P CLASS="text-body-indent-western">During configuration it may point
+out that required Perl modules are missing. If this happens, follow
+the steps detailed in the prerequisites section above to install
+these missing Perl modules.</P>
+<P CLASS="text-body-indent-western">When it has completed
+successfully, you will see this final message:</P>
+<BLOCKQUOTE CLASS="western">Looks good.... you are done.</BLOCKQUOTE>
+<H4 CLASS="western">1.4.3.2 Configuring MartView</H4>
+<P CLASS="text-body-indent-western">This section describes how to set
+up Apache for use with MartView.</P>
+<P CLASS="marginalia-western">You will need a Registry file defined –
+the default one is in the <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>conf</B></SPAN></FONT>
+folder and is called <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>registryURLPointer.xml</B></SPAN></FONT>.
+See section 3.3 for details on how to create your own registry file.</P>
+<P CLASS="marginalia-western">MartView can use only one single
+Registry file at a time.</P>
+<P CLASS="text-body-indent-western">Before running the configuration
+script for MartView some settings need to be defined in the
+<FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>settings.conf</B></SPAN></FONT>
+file in the <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>conf</B></SPAN></FONT>
+directory:</P>
+<UL>
+	<LI><P CLASS="text-body-indent-western"><FONT FACE="FreeMono, monospace">apacheBinary</FONT>
+	– you should set the path to your apache httpd binary. 
+	</P>
+	<LI><P CLASS="text-body-indent-western"><FONT FACE="FreeMono, monospace">serverHost</FONT>
+	– the hostname of the server to include in the apache
+	configuration. Leaving it as localhost is fine for most cases.</P>
+	<LI><P CLASS="text-body-indent-western"><FONT FACE="FreeMono, monospace">port</FONT>
+	– the part MartView should listen on for requests. The default one
+	should work fine. If MartView will be the only application served on
+	this machine you can change it to 80 so users do not have to enter a
+	port number when communicating with MartView via a web browser.</P>
+	<LI><P CLASS="text-body-indent-western"><FONT FACE="FreeMono, monospace">proxy</FONT>
+	– If your server is receiving port forwarded requests from a
+	server other than the one it is running on then you should enter
+	this server hostname here. As MartView needs to encode the hostname
+	in some responses in order to redirect future requests, it needs to
+	be told the hostname of the machine that the port-forwarded
+	connections are coming from. For the normal scenario of no
+	forwarding just leave blank.</P>
+	<LI><P CLASS="text-body-indent-western"><FONT FACE="FreeMono, monospace">location</FONT>
+	– this setting affects the URL that will be used to access
+	MartView. The URL will be formed of the server name, followed by the
+	response to this question, followed by the script name required. The
+	default setting on biomart will be used in all URL examples in this
+	documentation.</P>
+</UL>
+<P CLASS="text-body-indent-western">Other optional settings can be
+configured from within <FONT FACE="FreeMono, monospace"><B>settings.conf</B></FONT>,
+allowing  you to specify amongst others the colour schemes and
+wording to use on the site, and to specify an alternative web server
+to use for relative URLs from query results. It is possible to enable
+background result jobs where the results are stored in a server-side
+directory and the user emailed when they are ready. The directory
+settings and mail options are all configured here as well. Other
+configurable options include how long session related data is stored
+on the server and how webservices logging is managed.</P>
+<P CLASS="text-body-indent-western">You may also like to edit the
+<FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>site_header.tt</B></SPAN></FONT>
+document in the <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>conf/templates/default</B></SPAN></FONT>
+directory in order to embed the MartView interface into a custom
+setting, for instance by adding the logo and navigation bars from
+your website. Instructions for both <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>settings.conf</B></SPAN></FONT>
+and <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>site_header.tt</B></SPAN></FONT>
+are embedded within those files.</P>
+<P CLASS="text-body-indent-western">When you are done customising the
+settings, the same script is used to configure MartView as for the
+Perl API. 
+</P>
+<P CLASS="text-body-indent-western">From the <FONT FACE="DejaVu Serif Condensed, serif"><I><SPAN STYLE="font-weight: medium">biomart-perl</SPAN></I></FONT>
+directory type</P>
+<BLOCKQUOTE CLASS="western">perl bin/configure.pl -r
+conf/registryURLPointer.xml</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">changing <FONT FACE="FreeMono, monospace"><B>registryURLPointer.xml</B></FONT>
+to the registry file in the <FONT FACE="FreeMono, monospace"><B>conf</B></FONT>
+directory you wish to use.</P>
+<P CLASS="text-body-indent-western">It will ask:</P>
+<BLOCKQUOTE CLASS="western">Do you want to install in API only mode
+[y/n] [n]:</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">Type <FONT FACE="FreeMono, monospace"><B>n</B></FONT>
+to install the Perl API and MartView together. 
+</P>
+<P CLASS="text-body-indent-western">During configuration it may point
+out that required Perl modules are missing. If this happens, follow
+the steps detailed in the prerequisites section above to install
+these missing Perl modules.</P>
+<P CLASS="text-body-indent-western">MartView will now proceed to
+process the Registry file and download the various dataset
+configurations defined therein. It will build templates for then
+compile all the pages of the MartView website. This may take quite
+some time. The final message you see before completion should be:</P>
+<BLOCKQUOTE CLASS="western" STYLE="font-style: normal">Compiling
+templates for visible datasets</BLOCKQUOTE>
+<H3 CLASS="western">1.4.4 Starting and stopping MartView</H3>
+<P CLASS="text-body-indent-western">Change to<SPAN STYLE="font-weight: medium">
+t</SPAN><FONT FACE="DejaVu Serif Condensed, serif"><SPAN STYLE="font-weight: medium">he
+</SPAN></FONT><FONT FACE="DejaVu Serif Condensed, serif"><I><SPAN STYLE="font-weight: medium">biomart-perl</SPAN></I></FONT><FONT FACE="DejaVu Serif Condensed, serif"><SPAN STYLE="font-weight: medium">
+</SPAN></FONT><FONT FACE="DejaVu Serif Condensed, serif">directory</FONT>
+and type (substituting<FONT FACE="Courier 10 Pitch"><B>
+/my/chosen/Apache/binary</B></FONT> for the correct Apache location
+chosen during configuration):</P>
+<BLOCKQUOTE CLASS="western">/my/chosen/Apache/binary -d $PWD -f
+$PWD/conf/httpd.conf</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">Test MartView by pointing your
+web browser to the following URL, substituting <FONT FACE="Courier 10 Pitch"><B>&lt;host&gt;,
+&lt;port&gt; and &lt;location&gt;</B></FONT> for the values you
+configured earlier:</P>
+<BLOCKQUOTE CLASS="western">http://&lt;host&gt;:&lt;port&gt;/&lt;location&gt;/martview</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">e. g.</BLOCKQUOTE>
+<BLOCKQUOTE CLASS="western">http://localhost:5555/biomart/martview</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">To stop it again, change to the
+<FONT FACE="DejaVu Serif Condensed, serif"><I><SPAN STYLE="font-weight: medium">biomart-perl</SPAN></I></FONT>
+directory and type:</P>
+<BLOCKQUOTE CLASS="western">kill `cat logs/httpd.pid`</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">If the <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>httpd.pid</B></SPAN></FONT>
+file is damaged or missing, you will have to identify and kill the
+Apache processes manually. This is potentially dangerous if you have
+more than one Apache instance running on your machine and so should
+be done with care. Therefore you should always be careful not to
+damage <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>httpd.pid</B></SPAN></FONT>.</P>
+<H3 CLASS="western">1.4.5 Troubleshooting MartView startup</H3>
+<P CLASS="text-body-indent-western">The following information may
+help if you find that MartView will not start up correctly. Thanks to
+Eric Ross for providing most of it.</P>
+<H4 CLASS="western">1.4.5.1 Useless use of AllowOverride (in console)</H4>
+<P CLASS="text-body-indent-western">This is an Apache version issue
+and can be safely resolved by deleting the offending lines from
+<FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>httpd.conf</B></SPAN></FONT>.</P>
+<H4 CLASS="western">1.4.5.2 Couldn't determine Username (in console)</H4>
+<P CLASS="text-body-indent-western">Your operating system may not
+have a definition set up for the Apache web browser process owner. It
+can be resolved by adding <FONT FACE="FreeMono, monospace">User www</FONT>
+to the top of the <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>httpd.conf</B></SPAN></FONT>
+file. Also make sure the ownership of the biomart directory is <I>www</I>.</P>
+<P CLASS="text-body-indent-western">If Apache runs under a different
+user than <I>www</I> on your system, you should use that instead in
+the fix above.</P>
+<H4 CLASS="western">1.4.5.3 No such file or directory (in the log)</H4>
+<P CLASS="text-body-indent-western">The <I>martview</I>, <I>martresults</I>
+and <I>martservice</I> scripts can't find<I> </I><SPAN STYLE="font-style: normal">Perl</SPAN>.
+</P>
+<P CLASS="text-body-indent-western">Modify the first line of each
+script in the bin directory to point to the correct location of your
+Perl installation (which is often <FONT FACE="FreeMono, monospace"><SPAN STYLE="font-style: normal"><B>/usr/bin/perl</B></SPAN></FONT>).</P>
+<H4 CLASS="western">1.4.5.4 Can't call method &quot;settingsParams&quot;
+on an undefined value (in browser)</H4>
+<P CLASS="text-body-indent-western">Your<I> mod_perl </I>installation
+is broken or incompatible. Reinstall <I>mod_perl</I> from source and
+reconfigure MartView using the <FONT FACE="FreeMono, monospace">--clean</FONT>
+option. 
+</P>
+<P CLASS="text-body-indent-western">Note that on Mac OS X, installing
+<I>mod_perl</I> with <I>fink</I> may not be sufficient.</P>
+<H4 CLASS="western">1.4.5.5 Exception::Class::Base::new (in browser)</H4>
+<P CLASS="text-body-indent-western">Your<I> mod_perl </I>installation
+is broken or incompatible. Reinstall <I>mod_perl</I> from source and
+reconfigure MartView using the <FONT FACE="FreeMono, monospace">--clean</FONT>
+option. 
+</P>
+<P CLASS="text-body-indent-western">Note that on Mac OS X, installing
+<I>mod_perl</I> with <I>fink</I> may not be sufficient.</P>
+<H3 CLASS="western">1.4.6 MartView maintenance tasks</H3>
+<H4 CLASS="western">1.4.6.1 Updating the existing Registry</H4>
+<P CLASS="marginalia-western">If the datasets that your Registry
+points to have been updated or upgraded, but the list of datasets
+itself has not changed, then follow the instructions in this section.</P>
+<P CLASS="marginalia-western">If you modify your Registry in order to
+add or remove datasets, or need to change to a Registry file with a
+different name, you should refer to the section elsewhere in this
+document on switching to a different Registry.</P>
+<P CLASS="marginalia-western">Note if you rerun <B>configure.pl</B>
+without either the <B>update</B> or <B>clean</B> option it will use
+the default (<B>cached</B>) option to configure using the cached copy
+of the existing registry if it exists.  This is only useful if you
+want to modify the server settings.</P>
+<P CLASS="text-body-indent-western">If the datasets that your
+Registry file points to have been updated to newer versions, you will
+need to reconfigure MartView. To do this you must first stop
+MartView, then change to the <I>biomart-perl</I> directory and type
+the following (replacing <FONT FACE="FreeMono, monospace"><B>myRegistry.xml</B></FONT>
+with your actual Registry file, just as you did when first
+configuring):</P>
+<BLOCKQUOTE CLASS="western">perl bin/configure.pl --update -r
+conf/myRegistry.xml</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">Answer <FONT FACE="Courier 10 Pitch"><B>n</B></FONT>
+to the first prompt about configuring for the API, and answer <FONT FACE="Courier 10 Pitch"><B>y</B></FONT>
+to the second prompt about keeping your existing server
+configuration. The dataset configurations that were downloaded
+previously will be checked and any that have changed will be
+downloaded anew. Finally, the various templates that define the
+MartView pages will be rebuilt and recompiled to match any changes
+found.</P>
+<P CLASS="text-body-indent-western">You can now safely start MartView
+up again.</P>
+<H4 CLASS="western">1.4.6.2 Switching to a different Registry</H4>
+<P CLASS="text-body-indent-western">If you alter the Registry file so
+that it points to different datasets, or decide to use a completely
+different Registry file, then MartView needs to be reconfigured from
+scratch using the new Registry.</P>
+<P CLASS="text-body-indent-western">If you have renamed the registry
+file then you can just rerun configure.pl using the new name:</P>
+<BLOCKQUOTE CLASS="western" STYLE="text-align: justify">perl
+bin/configure.pl -r conf/myNewRegistry.xml</BLOCKQUOTE>
+<P CLASS="text-body-indent-western">If the altered registry still has
+the same name you must use the clean option to overwrite the cached
+copy:</P>
+<BLOCKQUOTE CLASS="western">perl bin/configure.pl --clean -r
+conf/myRegistry.xml</BLOCKQUOTE>
+<H4 CLASS="western" ALIGN=JUSTIFY>1.4.6.3 Changing memory usage</H4>
+<P CLASS="text-body-indent-western">The default behaviour suitable
+for a server with a large amount of memory is to keep all the
+configuration data in memory (<B>--memory</B><SPAN STYLE="font-weight: medium">
+option). If memory is an issue then you can run configure.pl with the
+</SPAN><B>-</B><FONT COLOR="#000000"><FONT FACE="FreeMono, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><B>-</B></SPAN></FONT></FONT></FONT><B>lazyload</B><SPAN STYLE="font-weight: medium">
+option which will store all configuration data locally on disk and
+just load what is currently required into memory. These options can
+be used with any of the above configure.pl options. For example to
+reconfigure the server in lazyload mode if none of the underlying
+configuration has changed you would run:</SPAN></P>
+<BLOCKQUOTE CLASS="western" STYLE="background: #e6e6ff; border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.1in; padding-right: 0in; font-style: normal">
+<FONT COLOR="#000000"><FONT FACE="FreeMono, monospace"><FONT SIZE=2>perl
+bin/configure.pl --lazyload -r conf/myRegistry.xml</FONT></FONT></FONT></BLOCKQUOTE>
+<H4 CLASS="western">1.4.6.4 Clearing download files</H4>
+<P CLASS="text-body-indent-western">An optional setting in the
+<I>settings.conf</I><SPAN STYLE="font-style: normal"> file in the
+</SPAN><I>conf</I><SPAN STYLE="font-style: normal"> folder allows
+users of MartView to request that their queries be run in the
+background and the results saved to file for them to download later.
+The location of the files is also defined in </SPAN><I>settings.conf</I><SPAN STYLE="font-style: normal">.</SPAN></P>
+<P CLASS="text-body-indent-western">The MartView system administrator
+needs to decide on a policy as to how long these files are kept on
+disk before being cleared out. Files can be removed safely just by
+deleting them.</P>
+<H4 CLASS="western">1.4.6.5 Clearing log files</H4>
+<P CLASS="text-body-indent-western">Log files are kept in the <I>log</I><SPAN STYLE="font-style: normal">
+directory. The logs are written by Apache, and can be maintained in
+the same way as Apache logs are maintained. In other words, you can
+pretty much do what you like to them.</SPAN></P>
+<P CLASS="text-body-indent-western">Make sure you do not accidentally
+delete the <I>httpd.pid</I> file whilst clearing logs. If you do so,
+it becomes harder to stop MartView safely.</P>
+<P CLASS="text-body-indent-western"><BR><BR>
+</P>
+</BODY>
+</HTML>
