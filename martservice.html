@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-EN">
+    <head>
+        <script src="assets/js/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="assets/js/menu.js" type="text/javascript"></script>
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/style.css" />-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#cancer-overlay').css('display','block').fadeOut(1);
+                
+                /*$('#cancer-link').mouseenter(function() { 
+                    $('#bio-overlay').fadeOut(300, function() {
+                        $('#cancer-overlay').fadeIn(500);
+                    });                    
+                }).mouseleave(function() {                    
+                    $('#cancer-overlay').fadeOut(300, function() {
+                        $('#bio-overlay').fadeIn(500);
+                    });
+                });*/
+        
+                 $('.portal-links').hover(hover_image_wait,hover_image_out);
+                
+                function hover_image_wait(){
+                    
+                    //var link = $(this);
+                    var rel=$(this).attr('rel');
+
+                    //clearInterval(my_interval);
+
+                    this.hover_image_in=function(){
+                       // alert('in');
+                      //  if(!link.hasClass('active')) {
+                          //  var rel = link.attr('rel');
+                            $('.overlay[rel!="'+rel+'"]').fadeOut(300, function() {
+                                $('.overlay[rel="'+rel+'"]').fadeIn(300);
+                            });
+                        //}
+                    };
+                    
+                    if(!$(this).hasClass('active')) hover_timeout=setTimeout(this.hover_image_in,300);  //Set timeout so doesn't get triggered all the time      
+        
+                    
+                }
+
+                    function hover_image_out(){
+                    //alert('out');
+                        clearInterval(hover_timeout);
+                        var link = $(this);
+                        
+                        if(!link.hasClass('active')) {
+                            
+                            var rel = link.attr('rel');
+                            //alert('hovering out '+rel);
+                            $('.overlay[rel="'+rel+'"]').fadeOut(300, function() {
+                                $('.overlay[rel!="'+rel+'"]').fadeIn(300);
+                            });
+                        }
+
+                        /*my_interval = setInterval(function() {
+                              rotate(current_image);
+                              ++current_image;
+
+                              if(current_image==num) current_image=0; //reset current image to start
+                          }, 4000);  */
+                    };
+               
+                /*$('.portal-links').mouseenter(function() {
+                    if(!$(this).hasClass('active')) {
+                        var rel = $(this).attr('rel');
+                        $('.overlay[rel!="'+rel+'"]').fadeOut(300, function() {
+                            $('.overlay[rel="'+rel+'"]').fadeIn(300);
+                        });
+                    }                    
+                }).mouseleave(function() {                    
+                    if(!$(this).hasClass('active')) {
+                        var rel = $(this).attr('rel');
+                        $('.overlay[rel="'+rel+'"]').fadeOut(300, function() {
+                            $('.overlay[rel!="'+rel+'"]').fadeIn(300);
+                        });
+                    }   
+                });*/
+                
+                $('.portal-links').click(function() {                
+                    if(!$(this).hasClass('active')) {                        
+                        $('.portal-links').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                });
+                
+                $('input, textarea').click(function() {
+                    reset_empty_inputs();
+                    if($(this).val()==$(this).attr('rel')) $(this).val('');
+                });
+                
+                function reset_empty_inputs(){                    
+                    $('input[type=text][value=""], textarea[value=""]').each(function() {                        
+                       $(this).val($(this).attr('rel'));
+                    });                    
+                }
+                
+                reset_empty_inputs();
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+        <link REL="SHORTCUT ICON" HREF="/favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Bio mart</title>
+           <!--[if lt IE 9]>
+   <style type="text/css">
+   #logo{
+        background:url('assets/images/logo-large.png') no-repeat scroll 0 0 transparent;
+        }
+   </style>
+   <![endif]-->
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo"></div>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a  href="/publications.html">Publications</a></li>
+                    <li><a href="/news.html">News</a></li>
+                </ul>
+            </div>
+            <div id="main-content">
+                <div id="top">
+                    <div id="bio-overlay" class="overlay" rel="bio"></div>
+                    <div id="cancer-overlay" class="overlay" rel="cancer"></div>
+                    <div id="download">
+                        <a href="/other/rc6_documentation.pdf" title="Download the latest software" >DOWNLOAD</a>
+                        <span class="version-number">Version 0.8</span>
+                    </div>
+                    <a href="http://central.biomart.org/" id="bio-link" class="portal-links active"  rel="bio">Proceed to <strong>Bio</strong> Portal</a>
+                    <a href="http://dcc.icgc.org/" id="cancer-link" class="portal-links"  rel="cancer">Proceed to <strong>Cancer</strong> Portal</a>
+                </div>
+                <div id="left">
+                    <div class="heading">
+                        <span class="yellow-box larger">
+                            Version 0.7
+                        </span>
+                        MartService
+                    </div>
+                    <div class="sub-heading">RESTful Access</div>
+                    <span class="title">Querying BioMart</span>
+                    <p>To submit a query using our webservices generate an XML document conforming to our Query XML syntax. This can be achieved simply by building up your query using MartView and hitting the XML button. This XML should be posted to /martservice attached to a single parameter of query. For example you could either:</p>
+                    <ul>
+                        <li>save your query as Query.xml and then POST this using the <a href="http://cvs.sanger.ac.uk/cgi-bin/viewvc.cgi/biomart-perl/scripts/webExample.pl?revision=1.3&root=biomart&view=markup&pathrev=release-0_7"  class="no-bg">webExample.pl</a> script in our biomart-perl/scripts installation.</li>
+                        <li>submit using wget: wget -O results.txt '/biomart/martservice?query=MY_XML' replacing MY_XML with the XML obtained above, first removing any new lines.</li>
+                    </ul>
+                    <span class="title">Retrieving Meta Data</span>                    
+                    <ul>
+                        <li>to retrieve registry information: /biomart/martservice?type=registry</li>
+                        <li>to retrieve datasets available for a mart: /biomart/martservice?type=datasets&mart=ensembl</li>
+                        <li>to retrieve attributes available for a dataset: /biomart/martservice?type=attributes&dataset=oanatinus_gene_ensembl</li>
+                        <li>to retrieve filters available for a dataset: /biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl</li>
+                        <li>to retrieve configuration for a dataset: /biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl</li>
+                    </ul>
+                    <div class="sub-heading with-margin">SOAP Access</div>                    
+                    <p>The SOAP based access is functionally equivalent to the REST style access described above. For description on BioMart SOAP based Web Service (MartServiceSoap), see:</p>
+                    <ul>
+                        <li>MartServiceSoap Endpoint (for SOAP based access only): /biomart/martsoap</li>
+                        <li>MartServiceSoap WSDL: /biomart/martwsdl</li>
+                        <li>MartServiceSoap XSD: /biomart/martxsd</li>
+                    </ul>
+                    
+                </div>
+                <div id="right">
+                    <ul class="menu noaccordion">
+                        <li>                            
+                            <a href="#">Version 0.8</a>
+                            <ul class="acitem">
+                                <li>                                    
+                                    <a href="/other/rc6_documentation.pdf"  style="margin-top:0;">Download</a>
+                                    <a href="/other/rc6_documentation.pdf" >User Documentation</a>
+                                    <a href="#" >Talks</a>                                    
+                                    <div style="clear:both;"/>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Version 0.7</a>
+                            <ul class="acitem">
+                                <li>                                    
+                                    <a href="/biomart/martview/"  style="margin-top:0;">Portal</a>
+                                    <a href="/other/install-overview.html" >Quick Install</a>
+                                    <a href="/other/user-docs.pdf" >Complete docs</a>
+                                    <a href="/martservice.html">MartService docs</a>
+                                    <div style="clear:both;"/>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>                            
+                            <a href="#">Mailing Lists</a>
+                            <ul class="acitem">
+                                <li>                                    
+                                    <a href="https://lists.biomart.org/mailman/listinfo/users"  style="margin-top:0;">Subscribe to 'Users'</a>
+                                    <a href="https://lists.biomart.org/pipermail/users/" >'Users' Archives</a>
+                                    <a href="https://lists.biomart.org/mailman/listinfo/announce" >Subscribe to 'Announce'</a>
+                                    <a href="https://lists.biomart.org/pipermail/announce/" >'Announce' Archives</a>
+                                    
+                                    <!--<form method="post" action="">
+                                        <input type="text" name="emailaddress" value="" rel="Email Address"/>
+                                        <input type="submit" name="join-mailing-list" value="Join"/>
+                                    </form>-->
+                                    <div style="clear:both;"/>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>                            
+                            <a href="#">Contact us</a>
+                            <ul class="acitem">
+                                <li>
+                                    <p class="line-height">If you have any inquiries regarding our software or services please email the <a href="mailto:users@biomart.org?Subject=General%20query" class="mailto">BioMart Users</a> mailing list.</p>
+                                    <p>For any other inquiries you may email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query" class="mailto">Arek Kasprzyk</a>.</p>
+                                    <!--<p class="line-height">If you have any inquiries regarding our software or services please email us at <a href="mailto:users@biomart.org?Subject=General%20query" class="mailto">users@biomart.org</a>.</p>-->
+                                    <!--<form method="post" action="">
+                                        <input type="text" name="name" value="" rel="Name"/>
+                                        <input type="text" name="emailaddress" value="" rel="Email Address"/>
+                                        <textarea name="message" rel="Message" value=""></textarea>
+                                        <input type="submit" name="send-message" value="Send"/>
+                                    </form>                                    -->
+                                    <!--<p class="line-height">For any other inquiries you may email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query" class="mailto">arek.kasprzyk@gmail.com</a></p>                                    -->
+                                    <div style="clear:both;"/>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--<li>
+                            <a href="#">Publications</a>
+                            <ul class="acitem">
+                                <li>
+                                    <a href="#" style="margin-top:0;">BioMart special issue</a>
+                                    <a href="http://database.oxfordjournals.org/content/2011/bar049.full.pdf+html" >Editorial</a>
+                                    <a href="http://database.oxfordjournals.org/content/2011/bar038.abstract" >BioMart software</a>
+                                    <a href="http://database.oxfordjournals.org/content/2011/bar041.abstract" >Bio Portal</a>
+                                    <a href="http://database.oxfordjournals.org/content/2011/bar026.abstract" >Cancer Portal</a>
+                                    <a href="/publications.html">More Publications</a>
+                                    <div style="clear:both;"/>
+                                 </li>
+                            </ul>
+                        </li>-->
+                        
+                    </ul>	
+                </div>
+                <div id="footer">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
