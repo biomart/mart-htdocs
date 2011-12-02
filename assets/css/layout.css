@@ -51,17 +51,17 @@ body {
 #header{
     position:relative;
     width:100%;
-    height:120px;
+    height:110px;
     margin:0;
 }
 
 #logo{
     background:url('../images/logo-large.png') no-repeat scroll 0 0 transparent;
-    width:293px;
-    height:90px;
+    width:250px;
+    height:77px;
     position:absolute;
     top:15px;
-    left:183px;
+    left:201px;
     
 }
 
@@ -114,7 +114,7 @@ font-family:arial narrow, calibri, 'Didact Gothic', serif;
 
 #main-content #top{    
     background:url('../images/map4.jpg') no-repeat scroll -1px -1px white;
-    height:464px;
+    height:426px;
     -moz-border-radius:25px 0px 0 0;
     -webkit-border-radius:25px 0px 0 0;
     
@@ -124,7 +124,7 @@ font-family:arial narrow, calibri, 'Didact Gothic', serif;
 
 #main-content #top .overlay{
     background:url('../images/bio-overlay2.png') no-repeat;    
-    height:464px;
+    height:426px;
     position: absolute;
     top: 0;
     left: 0;
@@ -413,4 +413,21 @@ background:none !important;
 font-weight:bold;
 float: none !important;
 display: inline !important;
+}
+
+#article-container{    
+    width:199px;
+    float:right;
+    position:relative;
+    height:290px;
+    margin-top:50px;
+    
+}
+
+#article-container a{
+    width:177px;
+    height:239px;
+    position:absolute;
+    background:url('../images/oxford3.png') scroll 0 0px transparent;
+    right:33px;
 }
