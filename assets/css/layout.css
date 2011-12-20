@@ -61,7 +61,7 @@ body {
     height:77px;
     position:absolute;
     top:15px;
-    left:201px;
+    left:140px;
     
 }
 
@@ -113,13 +113,25 @@ font-family:arial narrow, calibri, 'Didact Gothic', serif;
 }
 
 #main-content #top{    
-    background:url('../images/map4.jpg') no-repeat scroll -1px -1px white;
+    background:url('../images/map6.jpg') no-repeat scroll -1px -1px white;
     height:426px;
     -moz-border-radius:25px 0px 0 0;
     -webkit-border-radius:25px 0px 0 0;
     
     border-radius:25px 0px 0 0;
     position:relative;
+}
+
+#white-overlay{
+    width: 247px;
+height: 23px;
+position: absolute;
+background: white;
+-moz-border-radius: 25px 0px 0 0;
+-webkit-border-radius: 25px 0px 0 0;
+border-radius: 25px 0px 0 0;
+right: 0;
+bottom: 0;
 }
 
 #main-content #top .overlay{
@@ -133,6 +145,11 @@ font-family:arial narrow, calibri, 'Didact Gothic', serif;
 
 #main-content #top #cancer-overlay{
     background:url('../images/cancer-overlay2.png') no-repeat;
+    display:none;
+}
+
+#main-content #top #mouse-overlay{
+    background:url('../images/mouse-overlay.png') no-repeat;
     display:none;
 }
 
@@ -194,11 +211,16 @@ padding-right: 15px;
 }
 
 #main-content #top #bio-link{
-    top:300px;
+    top:260px;
     right:10px;
 }
 
 #main-content #top #cancer-link{
+    top:300px;
+    right:10px;
+}
+
+#main-content #top #mouse-link{
     top:340px;
     right:10px;
 }
@@ -394,6 +416,10 @@ line-height: 13px;
     margin-bottom:45px;
 }
 
+.publication-link.moveup{
+    margin-bottom:10px;
+}
+
 .no-bg{
     background:none !important;
     padding-left:0 !important;
@@ -430,4 +456,52 @@ display: inline !important;
     position:absolute;
     background:url('../images/oxford3.png') scroll 0 0px transparent;
     right:33px;
+}
+
+#main-content #left table a{
+    background:none;
+    padding:0;
+}
+
+
+
+#main-content #left table thead{
+    background:#ccc;
+}
+
+#main-content #left table thead{
+    border-bottom:1px solid #333;
+}
+
+#main-content #left table tr{
+    background:#eee;
+}
+
+
+#main-content #left table tr td{
+    border-top:1px solid #ddd;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+#main-content #left table tr.separate td{
+    border-top:4px solid #fff;
+}
+
+#main-content #left table thead tr{
+    background: #182532;
+color: white;
+text-align: left;
+}
+
+#main-content #left table th{
+    padding: 10px;
+font-family: agency fb;
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+#main-content #left table tbody tr:hover{
+    background:#182532;
 }
