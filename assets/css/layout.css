@@ -441,21 +441,29 @@ float: none !important;
 display: inline !important;
 }
 
-#article-container{    
+#article-container, #nature-container{    
     width:199px;
     float:right;
     position:relative;
     height:290px;
-    margin-top:50px;
-    
+    margin-top:0px;    
 }
 
-#article-container a{
+#nature-container{
+    margin-top:50px
+}
+
+#article-container a, #nature-container a{
     width:177px;
     height:239px;
     position:absolute;
     background:url('../images/oxford3.png') scroll 0 0px transparent;
     right:33px;
+}
+
+#nature-container a{
+    background:url('../images/nature2.png') scroll 0 0px transparent;
+    height:207px;
 }
 
 #main-content #left table a{
@@ -475,19 +483,40 @@ display: inline !important;
 
 #main-content #left table tr{
     background:#eee;
+    background:#3e6284;
+    
+    background:#fafafa;
 }
 
 
 #main-content #left table tr td{
-    border-top:1px solid #ddd;
     font-size: 15px;
     padding: 10px;
 }
 
-
-#main-content #left table tr.separate td{
-    border-top:4px solid #fff;
+#main-content #left table tr.top td{    
+    border-top:solid 1px #ccc;
 }
+
+#main-content #left table tr.bottom td{
+    border-bottom:solid 1px #ccc;
+}
+
+#main-content #left table tr td.left{
+    border-left:1px solid #ccc;
+    background:#f0f0fa;
+}
+
+#main-content #left table tr td.right{
+    border-right:1px solid #ccc;
+}
+#main-content #left table{
+    border-collapse: separate;
+    border-spacing: 0 0.4em;
+}
+
+
+
 
 #main-content #left table thead tr{
     background: #182532;
@@ -502,6 +531,6 @@ font-size: 18px;
 letter-spacing: 2px;
 }
 
-#main-content #left table tbody tr:hover{
-    background:#182532;
+#main-content #left table tbody tr td.left:hover{
+    border:1px solid #182532;
 }
