@@ -534,3 +534,16 @@ letter-spacing: 2px;
 #main-content #left table tbody tr td.left:hover{
     border:1px solid #182532;
 }
+
+.note{
+    color: #666;
+margin-bottom: 50px;
+font-style: italic;
+font-size: 14px;
+display: inline-block;
+}
+
+#main-content #left .note a{
+    background: none;
+padding: 0;
+}
