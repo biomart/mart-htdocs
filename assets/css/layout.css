@@ -536,14 +536,18 @@ letter-spacing: 2px;
 }
 
 .note{
-    color: #666;
+    color: #000;
 margin-bottom: 50px;
-font-style: italic;
-font-size: 14px;
+font-weight: bold;
+font-size: 15px;
 display: inline-block;
+word-spacing: 1px;
 }
 
 #main-content #left .note a{
     background: none;
 padding: 0;
+font-weight:normal;
+display:block;
+padding-left:12px;
 }
