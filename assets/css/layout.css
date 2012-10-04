@@ -255,11 +255,17 @@ padding-right: 15px;
 }
 
 #main-content #footer{
-    width: 940px;
+    text-align: center;
+width: 940px;
 float: left;
-padding: 10px 0 20px 20px;
-font-weight: bold;
-font-size: 16px;
+padding: 20px 0 20px 20px;
+font-size: 14px;
+font-fmaily: Helvetica;
+color: #055;
+}
+
+#main-content #footer a{
+    color:#0cc;
 }
 
 #main-content #left .heading, #main-content #left .sub-heading{
