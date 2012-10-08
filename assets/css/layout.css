@@ -566,3 +566,14 @@ display:block;
 padding-left:12px;
 }
 
+span.command{
+    border: solid 1px #CCC;
+    display:block;
+    padding:10px;
+    background: #FAFAFA;
+    color: #FF870F;
+}
+
+.sub-heading.download-heading{
+    margin-top:50px;
+}
