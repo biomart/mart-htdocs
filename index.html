@@ -177,9 +177,27 @@
                 </div>
                                     
                 <div id="announcement">                    
-                    <p><span class="title">Latest News [26th Nov 2012]</span>Ensembl Release 69 and Ensembl Genomes Release 16 now available through Bio Portal <a href="/news.html">read more &raquo;</a></p>
+                    <p><span class="title">Latest News [26th Nov 2012]</span>Ensembl Release 69 and Ensembl Genomes Release 16 now available through Bio Portal <a href="/news.html">read more &raquo;</a><a class="close" href="#" title="close">close</a></p>
                 </div>
             </div>
         </div>
     </body>
+<script type="text/javascript" src="assets/js/modernizr.js"></script>     
+<script type="text/javascript">
+    $(document).ready(function() {        
+        if (Modernizr.sessionstorage) {
+            if(sessionStorage.getItem("announcement")){
+                $('#announcement').hide();
+            }
+            
+            $('#announcement .close').show();
+            
+            $('#announcement .close').click(function() {                
+                sessionStorage.setItem("announcement", "close");
+                $('#announcement').hide();
+                return false;
+            });
+        }        
+    });    
+</script>
 </html>

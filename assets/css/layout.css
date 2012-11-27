@@ -587,6 +587,7 @@ span.command{
     background: #F90;
     box-shadow: 0px 0px 6px -1px black;
     padding:0 20px;
+    
 }
 
 #announcement .title{
@@ -600,5 +601,19 @@ span.command{
 #announcement a{
     font-weight:bold;
     padding-left:5px;
+    
+}
+
+#announcement .close{
+    display:none;
+    background:url('../images/grey-cross.png') no-repeat 50% 50%;
+    width:13px;
+    height:13px;
+    overflow:hidden;
+    text-indent:-100px;
+    position:absolute;
+    top:10px;
+    right:50px;
+    cursor:pointer;    
 }
 
