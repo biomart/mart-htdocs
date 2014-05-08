@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+    <head>
+        <!-- meta information -->
+        <meta charset="utf-8" />
+        <meta name="author"
+              content="Evolution Cigs" />
+        <meta name="description"
+              content="description" />
+        <meta name="robots"
+              content="noindex,nofollow,nosnippet" />
+        <meta name="revisit-after"
+              content="14 days" />
+        <meta name="country"
+              content="UK" />
+        <meta name="language"
+              content="en-GB" />
+
+        <!-- Who worked on this? -->
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1">
+
+        <!-- Styling for all devices -->
+        <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
+
+        <!-- Favicons [ See: http://www.jonathantneal.com/blog/understand-the-favicon/ ]
+             TL;DR: put a 32x32 favicon.ico file in root for IE, everything else uses the PNGs declared here -->
+        <!-- Favicon for Apple -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <!-- Win8 tiles -->
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-tileicon.png" />
+        <!-- Favicon for everything else -->
+        <link rel="icon" href="/assets/images/favicon.png" />
+
+        <!-- The Adaptive-Images JavaScript
+             NOTE:      Used to automatically provide re-scaled images appropriate to the visitors device
+             REFERENCE: http://adaptive-images.com -->
+        <script>document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+
+        <!-- google analytics
+             NOTE:      This goes in the head because it's the asynchronous loader, read more here:
+             REFERENCE: http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html -->
+        <script type="text/javascript">
+        </script>
+
+        <!-- Modernizr also goes in the head, to allow the HTML5 shiv to work for IE, and prevent FOUC.
+             REFERENCE: http://www.modernizr.com/docs/#installing -->
+
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            $(window).load(function() {
+                $('html').addClass('load');
+
+                $('.site_context .menu li.selected > a').click();
+
+                setTimeout(function() {
+                    $('.uk').addClass('selected');
+
+                    $('.country:not(.uk)').hover(function() {
+                        $('.uk').removeClass('selected');
+                        $('.country').unbind('mouseenter mouseleave');
+                    });
+                }, 3000);
+
+            });
+            
+            $(document).ready(function() {
+                $(document).scroll(function() {
+
+                    var top = $(document).scrollTop();
+                    if (top <= 10) $('.header, .site_context').removeClass('shrink');
+                    if (top > 10) $('.header, .site_context').addClass('shrink');
+                   
+                    
+
+                });
+            });
+        </script>
+
+        <title>Biomart</title>
+
+    </head>
+    <body>
+        <div class="site_context">
+            <div class="main_nav">
+                <h2>Navigation</h2>
+                <ul class="menu collapsible">
+                    <li class="selected">
+                        <a href="#">Tools</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="http://central.biomart.org/">browse data</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/converter/#!/ID_converter/gene_ensembl_config_2">id conversion</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/sequence/?gui=Sequence_retrieval&mart=metaseq_mart_63_config">sequence retrieval</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/enrichment/#/gui/Enrichment/">enrichment analysis</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="/publications.html">Publications</a>
+                    </li>
+                    <li>
+                        <a href="/news.html">News</a>
+                    </li>                    
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="acitem">
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users Mailing List</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-announce">Announce Mailing List</a>
+                            </li>
+                            <li>
+                                <p>If you have any inquiries regarding our software or services please post it to the <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users mailing list</a></p>
+                                <p>For any other inquiries please email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query">Arek Kasprzyk</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="credits">
+                        <a href="/credits.html">Credits</a>                       
+                    </li>
+                    <li>
+                        <a target="_blank" href="/files/rc6_documentation.pdf">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">version 0.7</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/biomart/martview/">Portal</a>
+                            </li>
+                            <li>
+                                <a href="/other/install-overview.html">Quick Install</a>
+                            </li>
+                            <li>
+                                <a href="/other/user-docs.pdf">Complete Docs</a>
+                            </li>
+                            <li>
+                                <a href="/martservice.html">MartService Docs</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="publications">
+                <span class="read-more">read more</span>
+                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" class="database">
+                    <img src="assets/images/pub-db.png" />
+                    <span>special issue<br/>dedicated to biomart</span>
+                </a>
+                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" class="nature">
+                    <img src="assets/images/pub-nature.png" />
+                    <span>biomart in<br/>nature methods</span>
+                </a>
+            </div>
+        </div>
+        <div class="header section">
+            <a href="/" class="logo">Biomart</a>
+            <a href="/download.html" class="download">Download<span>v 0.9</span></a>
+            <a href="/news.html" class="latest-news"><span>[27th Sept 2013] Latest version of Uniprot and Ensembl Genomes now available</span></a>            
+        </div>
+        <div class="main-content section">
+            <div class="intro">
+                <h1><span>BioMart</span></h1>
+                <h2><span>is a community-driven project to provide unified access to distributed research data to facilitate the scientific discovery process.</span></h2>
+                <div class="left sub-section">
+                    <p>The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse.</p>
+                    <div class="tool-icons">
+                        <a href="http://central.biomart.org/" class="browse-data"><img src="assets/images/browse-data.jpg"/><span>browse<br/>data</span></a>
+                        <a href="http://central.biomart.org/converter/#!/ID_converter/gene_ensembl_config_2" class="id-conversion"><img src="assets/images/id-conversion.jpg"/><span>id<br/>conversion</span></a>
+                        <a href="http://central.biomart.org/sequence/?gui=Sequence_retrieval&mart=metaseq_mart_63_config" class="sequence-retrieval"><img src="assets/images/sequence-retrieval.jpg"/><span>sequence<br/>retrieval</span></a>
+                        <a href="http://central.biomart.org/enrichment/#/gui/Enrichment/" class="enrichment-analysis"><img src="assets/images/enrichment-analysis.jpg"/><span>enrichment<br/>analysis</span></a>
+                    </div>
+                </div>
+                <div class="right sub-section">
+                    <div class="join-community">
+                        <h3>Join our community</h3>
+                        <div>
+                            <ol>
+                                <li>Set up your own data source with a click of a button</li>
+                                <li>Expose your data to a world wide scientific community through BioMart Portal.</li>
+                                <li>Federate your local data with data from other community members</li>
+                            </ol>
+
+                            <span>download our software to join</span>
+                            <a href="/download.html">download now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-section">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>A large number of servers that provide access to a wide range of research data have been set up by the BioMart community. Using BioMart’s unique data federation technology, a Central Portal was established to provide a convenient single point of access to all of these data, which is distributed worldwide.</p>
+                                <a href="http://central.biomart.org/">Browse data</a>
+                            </td>
+                            <td class="display">
+                                <h3>46 databases, 4 continents <strong>and growing</strong></h3>
+                                <div class="map-container">
+                                    <div class="uk country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>UK</strong> 23</div>
+                                    </div>
+                                    <div class="canada country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>CANADA</strong> 1</div>
+                                    </div>
+                                    <div class="chile country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>CHILE</strong> 1</div>
+                                    </div>
+                                    <div class="china country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>CHINA</strong> 2</div>
+                                    </div>
+                                    <div class="france country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>FRANCE</strong> 5</div>
+                                    </div>
+                                    <div class="italy country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>ITALY</strong> 1</div>
+                                    </div>
+                                    <div class="japan country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>JAPAN</strong> 1</div>
+                                    </div>
+                                    <div class="korea country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>SOUTH KOREA</strong> 1</div>
+                                    </div>
+                                    <div class="peru country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>PERU</strong> 1</div>
+                                    </div>
+                                    <div class="spain country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>SPAIN</strong> 2</div>
+                                    </div>
+                                    <div class="usa country">
+                                        <div class="map_pin"></div>
+                                        <div class="map_label"><strong>USA</strong> 8</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="community publications">
+    <head>
+        <!-- meta information -->
+        <meta charset="utf-8" />
+        <meta name="author"
+              content="Evolution Cigs" />
+        <meta name="description"
+              content="description" />
+        <meta name="robots"
+              content="noindex,nofollow,nosnippet" />
+        <meta name="revisit-after"
+              content="14 days" />
+        <meta name="country"
+              content="UK" />
+        <meta name="language"
+              content="en-GB" />
+
+        <!-- Who worked on this? -->
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1">
+
+        <!-- Styling for all devices -->
+        <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
+
+        <!-- Favicons [ See: http://www.jonathantneal.com/blog/understand-the-favicon/ ]
+             TL;DR: put a 32x32 favicon.ico file in root for IE, everything else uses the PNGs declared here -->
+        <!-- Favicon for Apple -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <!-- Win8 tiles -->
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-tileicon.png" />
+        <!-- Favicon for everything else -->
+        <link rel="icon" href="/assets/images/favicon.png" />
+
+        <!-- The Adaptive-Images JavaScript
+             NOTE:      Used to automatically provide re-scaled images appropriate to the visitors device
+             REFERENCE: http://adaptive-images.com -->
+        <script>document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+
+        <!-- google analytics
+             NOTE:      This goes in the head because it's the asynchronous loader, read more here:
+             REFERENCE: http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html -->
+        <script type="text/javascript">
+        </script>
+
+        <!-- Modernizr also goes in the head, to allow the HTML5 shiv to work for IE, and prevent FOUC.
+             REFERENCE: http://www.modernizr.com/docs/#installing -->
+
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            $(window).load(function() {
+                $('html').addClass('load');
+
+                $('.site_context .menu li.selected > a').click();
+
+                setTimeout(function() {
+                    $('.uk').addClass('selected');
+
+                    $('.country:not(.uk)').hover(function() {
+                        $('.uk').removeClass('selected');
+                        $('.country').unbind('mouseenter mouseleave');
+                    });
+                }, 3000);
+
+            });
+
+            $(document).ready(function() {
+                $(document).scroll(function() {
+
+                    var top = $(document).scrollTop();
+                    if (top <= 10)
+                        $('.header, .site_context').removeClass('shrink');
+                    if (top > 10)
+                        $('.header, .site_context').addClass('shrink');
+
+
+
+                });
+
+
+                $('.community-table tr').on("click", function() {
+                    if ($(this).attr('data-href') !== undefined) {
+                        window.open($(this).attr('data-href'),'_blank');
+                    }
+                });
+            });
+        </script>
+
+        <title>Biomart</title>
+
+    </head>
+    <body>
+        <div class="site_context">
+            <div class="main_nav">
+                <h2>Navigation</h2>
+                <ul class="menu collapsible">
+                    <li>
+                        <a href="#">Tools</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="http://central.biomart.org/">browse data</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/converter/#!/ID_converter/gene_ensembl_config_2">id conversion</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/sequence/?gui=Sequence_retrieval&mart=metaseq_mart_63_config">sequence retrieval</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/enrichment/#/gui/Enrichment/">enrichment analysis</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/community.html">Community</a>
+                    </li>
+                    <li class="selected">
+                        <a href="/publications.html">Publications</a>
+                    </li>
+                    <li>
+                        <a href="/news.html">News</a>
+                    </li>                    
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="acitem">
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users Mailing List</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-announce">Announce Mailing List</a>
+                            </li>
+                            <li>
+                                <p>If you have any inquiries regarding our software or services please post it to the <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users mailing list</a></p>
+                                <p>For any other inquiries please email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query">Arek Kasprzyk</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="credits">
+                        <a href="/credits.html">Credits</a>                       
+                    </li>
+                    <li>
+                        <a target="_blank" href="/files/rc6_documentation.pdf">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">version 0.7</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/biomart/martview/">Portal</a>
+                            </li>
+                            <li>
+                                <a href="/other/install-overview.html">Quick Install</a>
+                            </li>
+                            <li>
+                                <a href="/other/user-docs.pdf">Complete Docs</a>
+                            </li>
+                            <li>
+                                <a href="/martservice.html">MartService Docs</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="publications">
+                <span class="read-more">read more</span>
+                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" class="database">
+                    <img src="assets/images/pub-db.png" />
+                    <span>special issue<br/>dedicated to biomart</span>
+                </a>
+                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" class="nature">
+                    <img src="assets/images/pub-nature.png" />
+                    <span>biomart in<br/>nature methods</span>
+                </a>
+            </div>
+        </div>
+        <div class="header section">
+            <a href="/" class="logo">Biomart</a>
+            <a href="/download.html" class="download">Download<span>v 0.9</span></a>
+            <a href="/news.html" class="latest-news"><span>[27th Sept 2013] Latest version of Uniprot and Ensembl Genomes now available</span></a>            
+        </div>
+        <div class="main-content section">
+            <div class="intro">
+                <h1><span>Publications</span></h1>
+                <h2><span>We have a number of publications both by our team and by our community.</span></h2>
+                <div class="left sub-section">
+                    <p>The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse.</p>
+
+                </div>
+                <div class="right sub-section">
+                    <div class="join-community">
+                        <h3>Citing Biomart</h3>
+                        <div>
+                            <p>When citing BioMart, refer to this paper:</p>
+                            <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar049.full">Database (Oxford). 2011 Nov 13;2011:bar049. Print 2011. PubMed PMID: 22083790;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-section featured-publications">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>Nature Methods' Technology Feature</p><p>Quantitative data: learning to share.</p>    
+                                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" >Nature Methods 9, 39–41 (2012) doi:10.1038/nmeth.1815</a>
+                                <br/><br/>
+                                <p>DATABASE Special Issue Dedicated to BioMart</p><p>This issue recognizes BioMart's outstanding contributions to bioinformatics and documents the achievements of the BioMart community.</p>
+                                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" >DATABASE Special Issue Dedicated to BioMart</a>
+                            </td><td class="display">
+                                <h3><span>featured in <strong>nature methods</strong> and <strong>database</strong></span></h3>
+                                <div class="image-container"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="community-table by-team">
+                <h3><span>Publications by the BioMart Team</span></h3>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Author
+                            </th>
+                            <th>
+                                Read Online
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar049.full">
+                            <td class="left">
+                                <b>BioMart: driving a paradigm change in biological data management</b>
+                            </td>
+                            <td>
+                                Kasprzyk A
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar049.full" >Database Vol. 2011, doi:10.1093/database/bar049</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar041.full">
+                            <td class="left">
+                                <b>BioMart Central Portal: An Open Database Network for Biological Community</b>
+                            </td>
+                            <td>
+                                Jonathan M. Guberman, J. Ai, O. Arnaiz, Joachim Baran, Andrew Blake, Richard Baldock, Claude Chelala, David Croft, Anthony Cros, Rosalind J. Cutts, A. Di Génova, Simon Forbes, T. Fujisawa, E. Gadaleta, D. M. Goodstein, Gunes Gundem, Bernard Haggarty, Syed Haider, Matthew Hall, Todd Harris, Robin Haw, S. Hu, Simon Hubbard, Jack Hsu, Vivek Iyer, Philip Jones, Toshiaki Katayama, R. Kinsella, Lei Kong, Daniel Lawson, Yong Liang, Nuria Lopez-Bigas, J. Luo, Michael Lush, Jeremy Mason, Francois Moreews, Nelson Ndegwa, Darren Oakley, Christian Perez-Llamas, Michael Primig, Elena Rivkin, S. Rosanoff, Rebecca Shepherd, Reinhard Simon, B. Skarnes, Damian Smedley, Linda Sperling, William Spooner, Peter Stevenson, Kevin Stone, J. Teague, Jun Wang, Jianxin Wang, Brett Whitty, D. T. Wong, Marie Wong-Erasmus, L. Yao, Ken Youens-Clark, Christina Yung, Junjun Zhang, and Arek Kasprzyk
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar041.full" >Database Vol. 2011, doi:10.1093/database/bar041</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar038.full">
+                            <td class="left">
+                                <b>BioMart: A data federation framework for large collaborative projects</b>
+                            </td>
+                            <td>
+                                Junjun Zhang, Syed Haider, Joachim Baran, Anthony Cros, Jonathan M. Guberman, Jack Hsu, Yong Liang, Long Yao, and Arek Kasprzyk
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar038.full" >Database Vol. 2011, doi:10.1093/database/bar049</a>
+                            </td>
+                        </tr>                        
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar026.full">
+                            <td class="left">
+                                <b>International Cancer Genome Consortium Data Portal: A One Stop Shop for Cancer Genomics Data</b>
+                            </td>
+                            <td>
+                                Junjun Zhang, Joachim Baran, A. Cros, Jonathan M. Guberman, Syed Haider, Jack Hsu, Yong Liang, Elena Rivkin, Jianxin Wang, Brett Whitty, Marie Wong-Erasmus, Long Yao, and Arek Kasprzyk
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar026.full" >Database Vol. 2011, doi:10.1093/database/bar026</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://nar.oxfordjournals.org/content/37/suppl_2/W23.abstract">
+                            <td class="left">
+                                <b>BioMart Central Portal - unified access to biological data</b>
+                            </td>
+                            <td>
+                                Haider S, Ballester B, Smedley, D, Zhang J, Rice P, Kasprzyk A
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://nar.oxfordjournals.org/content/37/suppl_2/W23.abstract" >Nucliec Acids Res. 2009 July 1; 37(Web Server issue) : W23-7</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://www.biomedcentral.com/1471-2164/10/22/abstract">
+                            <td class="left">
+                                <b>BioMart - biological queries made easy</b>
+                            </td>
+                            <td>
+                                Smedley D, Haider S, Ballester B, Holland R, London D, Thorisson G, Kasprzyk A
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://www.biomedcentral.com/1471-2164/10/22/abstract" >BMC Genomics. 2009 Jan 14;10:22</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://www.ncbi.nlm.nih.gov/pubmed/16082012?dopt=Citation">
+                            <td class="left">
+                                <b>BioMart and Bioconductor: a powerful link between biological databases and microarray data analysis</b>
+                            </td>
+                            <td>
+                                Durinck S, Moreau Y, Kasprzyk A, Davis S, De Moor B, Brazma A, Huber W
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/16082012?dopt=Citation" >Bioinformatics. 2005 Aug 15;21(16):3439-40</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://genome.cshlp.org/content/14/1/160.full">
+                            <td class="left">
+                                <b>EnsMart: A Generic System for Fast and Flexible Access to Biological Data</b>
+                            </td>
+                            <td>
+                                Kasprzyk A, Keefe D, Smedley D, London D, Spooner W, Melsopp C, Hammond M, Rocca-Serra P, Cox T, Birney E
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://genome.cshlp.org/content/14/1/160.full" >Genome Res. 2004 Jan; 14(1):160-169</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="community-table by-team by-community">
+                <h3><span>Publications by the BioMart Community</span></h3>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Author
+                            </th>
+                            <th>
+                                Read Online
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar047.full">
+                            <td class="left">
+                                <b>Critical amino acid residues in proteins: a BioMart integration of Reactome protein annotations with PRIDE mass spectrometry data and COSMIC somatic mutations</b>
+                            </td>
+                            <td>
+                                Nelson Ndegwa, Richard G. Côté, David Ovelleiro, Peter D'Eustachio, Henning Hermjakob, Juan A. Vizcaíno and David Croft
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar047.full" >Database Vol. 2011, doi:10.1093/database/bar047</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar039.full">
+                            <td class="left">
+                                <b>Integrative Cancer Genomics (IntOGen) in BioMart</b>
+                            </td>
+                            <td>
+                                Christian Perez-Llamas, Gunes Gundem and Nuria Lopez-Bigas
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar039.full" >Database Vol. 2011, doi:10.1093/database/bar039</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar033.full">
+                            <td class="left">
+                                <b>The InterPro BioMart: Powerful, federated query and web-service access to the InterPro resource</b>
+                            </td>
+                            <td>
+                                Philip Jones, David Binns, Conor McMenamin, Craig McAnulla, and Sarah Hunter
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar033.full" >Database Vol. 2011, doi:10.1093/database/bar033</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar031.full">
+                            <td class="left">
+                                <b>The Reactome BioMart</b>
+                            </td>
+                            <td>
+                                Robin Haw, David Croft, Christina K Yung, Nelson Ndegwa, Peter D'Eustachio, Henning Hermajakob and Lincoln Stein
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar031.full" >Database Vol. 2011, doi:10.1093/database/bar031</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar030.full">
+                            <td class="left">
+                                <b>Ensembl BioMarts: a hub for data retrieval across the taxonomic space</b>
+                            </td>
+                            <td>
+                                Rhoda J. Kinsella,  Andreas Kähäri, Syed Haider, Jorge Zamora, Glenn Proctor, Giulietta Spudich, Jeff Almeida-King, Daniel Staines, Paul Derwent, Arnaud Kerhornou, Paul Kersey, and Paul Flicek
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar030.full" >Database Vol. 2011, doi:10.1093/database/bar030</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar029.full">
+                            <td class="left">
+                                <b>The BioMart interface to the EMAGE gene expression database</b>
+                            </td>
+                            <td>
+                                Peter Stevenson, Lorna Richardson, Shanmugasundaram Venkataraman, Yiya Yang, Richard Baldock
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar029.full" >Database Vol. 2011, doi:10.1093/database/bar029</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar028.full">
+                            <td class="left">
+                                <b>BioMart as an integration solution for the International Knockout Mouse Consortium</b>
+                            </td>
+                            <td>
+                                Darren J. Oakley, Vivek Iyer, William C. Skarnes, and Damian Smedley
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar028.full" >Database Vol. 2011, doi:10.1093/database/bar028</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar025.full">
+                            <td class="left">
+                                <b>SigReannot-mart: A query environment for expression microarray probe re-annotations</b>
+                            </td>
+                            <td>
+                                François Moreews, Gaelle Rauffet, Patrice Dehais, and Christophe Klopp
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar025.full" >Database Vol. 2011, doi:10.1093/database/bar025</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar024.full">
+                            <td class="left">
+                                <b>Using BioMart as a framework to manage and query pancreatic cancer data</b>
+                            </td>
+                            <td>
+                                Rosalind J. Cutts, Emanuela Gadaleta, Nicholas R. Lemoine, and Claude Chelala
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar024.full" >Database Vol. 2011, doi:10.1093/database/bar024</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://database.oxfordjournals.org/content/2011/bar018.full">
+                            <td class="left">
+                                <b>Data mining using the Catalogue of Somatic Mutations in Cancer BioMart</b>
+                            </td>
+                            <td>
+                                Rebecca Shepherd, Simon A. Forbes, David Beare, S. Bamford, Charlotte G. Cole, Sari Ward, Nidhi Bindal, Prasad Gunasekaran, Mingming Jia, Chai Yin Kok, Kenric Leung, Andrew Menzies, Adam P. Butler, Jon W. Teague, Peter J. Campbell, Michael R. Stratton, and P. Andrew Futreal
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://database.oxfordjournals.org/content/2011/bar018.full" >Database Vol. 2011, doi:10.1093/database/bar018</a>
+                            </td>                            
+                        </tr>
+                        <tr class="separate top bottom" data-href="http://www.ncbi.nlm.nih.gov/pubmed/14582522?dopt=Abstract">
+                            <td class="left">
+                                <b>Shopping in the genome market with EnsMart</b>
+                            </td>
+                            <td>
+                                Gilbert D
+                            </td>
+                            <td class="right">
+                                <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/14582522?dopt=Abstract" >Brief Bioinform. 2003 Sep;4(3):292-6</a>
+                            </td>                            
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </body>
+</html>

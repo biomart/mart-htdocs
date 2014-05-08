@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="community news">
+    <head>
+        <!-- meta information -->
+        <meta charset="utf-8" />
+        <meta name="author"
+              content="Evolution Cigs" />
+        <meta name="description"
+              content="description" />
+        <meta name="robots"
+              content="noindex,nofollow,nosnippet" />
+        <meta name="revisit-after"
+              content="14 days" />
+        <meta name="country"
+              content="UK" />
+        <meta name="language"
+              content="en-GB" />
+
+        <!-- Who worked on this? -->
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1">
+
+        <!-- Styling for all devices -->
+        <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
+
+        <!-- Favicons [ See: http://www.jonathantneal.com/blog/understand-the-favicon/ ]
+             TL;DR: put a 32x32 favicon.ico file in root for IE, everything else uses the PNGs declared here -->
+        <!-- Favicon for Apple -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <!-- Win8 tiles -->
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-tileicon.png" />
+        <!-- Favicon for everything else -->
+        <link rel="icon" href="/assets/images/favicon.png" />
+
+        <!-- The Adaptive-Images JavaScript
+             NOTE:      Used to automatically provide re-scaled images appropriate to the visitors device
+             REFERENCE: http://adaptive-images.com -->
+        <script>document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+
+        <!-- google analytics
+             NOTE:      This goes in the head because it's the asynchronous loader, read more here:
+             REFERENCE: http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html -->
+        <script type="text/javascript">
+        </script>
+
+        <!-- Modernizr also goes in the head, to allow the HTML5 shiv to work for IE, and prevent FOUC.
+             REFERENCE: http://www.modernizr.com/docs/#installing -->
+
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            $(window).load(function() {
+                $('html').addClass('load');
+
+                $('.site_context .menu li.selected > a').click();
+
+                setTimeout(function() {
+                    $('.uk').addClass('selected');
+
+                    $('.country:not(.uk)').hover(function() {
+                        $('.uk').removeClass('selected');
+                        $('.country').unbind('mouseenter mouseleave');
+                    });
+                }, 3000);
+
+            });
+
+            $(document).ready(function() {
+                $(document).scroll(function() {
+
+                    var top = $(document).scrollTop();
+                    if (top <= 10)
+                        $('.header, .site_context').removeClass('shrink');
+                    if (top > 10)
+                        $('.header, .site_context').addClass('shrink');
+
+
+
+                });
+            });
+        </script>
+
+        <title>Biomart</title>
+
+    </head>
+    <body>
+        <div class="site_context">
+            <div class="main_nav">
+                <h2>Navigation</h2>
+                <ul class="menu collapsible">
+                    <li>
+                        <a href="#">Tools</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="http://central.biomart.org/">browse data</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/converter/#!/ID_converter/gene_ensembl_config_2">id conversion</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/sequence/?gui=Sequence_retrieval&mart=metaseq_mart_63_config">sequence retrieval</a>
+                            </li>
+                            <li>
+                                <a href="http://central.biomart.org/enrichment/#/gui/Enrichment/">enrichment analysis</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="/publications.html">Publications</a>
+                    </li>
+                    <li class="selected">
+                        <a href="/news.html">News</a>
+                    </li>                    
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="acitem">
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users Mailing List</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-announce">Announce Mailing List</a>
+                            </li>
+                            <li>
+                                <p>If you have any inquiries regarding our software or services please post it to the <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users mailing list</a></p>
+                                <p>For any other inquiries please email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query">Arek Kasprzyk</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="credits">
+                        <a href="/credits.html">Credits</a>                       
+                    </li>
+                    <li>
+                        <a target="_blank" href="/files/rc6_documentation.pdf">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">version 0.7</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/biomart/martview/">Portal</a>
+                            </li>
+                            <li>
+                                <a href="/other/install-overview.html">Quick Install</a>
+                            </li>
+                            <li>
+                                <a href="/other/user-docs.pdf">Complete Docs</a>
+                            </li>
+                            <li>
+                                <a href="/martservice.html">MartService Docs</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="publications">
+                <span class="read-more">read more</span>
+                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" class="database">
+                    <img src="assets/images/pub-db.png" />
+                    <span>special issue<br/>dedicated to biomart</span>
+                </a>
+                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" class="nature">
+                    <img src="assets/images/pub-nature.png" />
+                    <span>biomart in<br/>nature methods</span>
+                </a>
+            </div>
+        </div>
+        <div class="header section">
+            <a href="/" class="logo">Biomart</a>
+            <a href="/download.html" class="download">Download<span>v 0.9</span></a>
+            <a href="/news.html" class="latest-news"><span>[27th Sept 2013] Latest version of Uniprot and Ensembl Genomes now available</span></a>            
+        </div>
+        <div class="main-content section">
+            <div class="intro">
+                <h1><span>News</span></h1>
+                <h2><span>See how Biomart has grown since our launch in 2007?!.</span></h2>
+                <div class="left sub-section">
+                    <p>View our timeline for all the latest news, community updates and biomart releases.</p>
+                </div>
+                <div class="right sub-section">
+                    <div class="join-community">
+                        <h3>Join our community</h3>
+                        <div>
+                            <span>download our software to join</span>
+                            <a href="/download.html">download now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="year y2015">
+                    <span>2015</span>
+                </div>
+                <div class="news left yellow">
+                    <h3>Latest version of Ensembl and VectorBase now available</h3>
+                    <div class="news-content">                        
+                        <p class="date"><span>March 7th 2014</span></p>
+                        <p>You can access the new versions of Ensembl and VectorBase through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>Latest version of Ensembl, Ensembl Genomes, Uniprot and Vector Base now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>February 7th 2014</span></p>
+                        <p>You can access the new versions of Ensembl, Ensembl Genomes, Uniprot and Vector Base through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>                
+                <div class="year y2014">
+                    <span>2014</span>
+                </div>
+                <div class="news left black">
+                    <h3>Latest version of Uniprot and Ensembl Genomes now available</h3>
+                    <div class="news-content">                        
+                        <p class="date"><span>September 27th 2013</span></p>
+                        <p>You can access the new versions of Uniprot and Ensembl Genomes through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+                <div class="news right yellow">
+                    <h3>Latest version of Ensembl now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>September 18th 2013</span></p>
+                        <p>You can access the new versions of Ensembl through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+
+                <div class="news left yellow">
+                    <h3>We would like to welcome our newest community member - Institut Nationale de Recherche Agronomique.</h3>
+                    <div class="news-content">                        
+                        <p class="date"><span>August 26th 2013</span></p>
+                        <p>Please visit our community page for more information on Institut Nationale de Recherche Agronomique (INRA).</p>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>Latest updates to Uniprot, VectorBase, COSMIC, Pancreatic Expression Database and Ensembl Genomes also available</h3>
+                    <div class="news-content">                        
+                        <p class="date"><span>August 26th 2013</span></p>
+                        <p>You can access the new versions of Ensembl Genomes, Uniprot, COSMIC, Pancreatic Expression Database and Vectorbase through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>    
+                </div>
+                <div class="news left black">
+                    <h3>New versions of Ensembl, Uniprot, Phytozome, Vectorbase, Gramene, Pancreatic Expression Database and Reactome now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>July 15th 2013</span></p>
+                        <p>You can access the new versions of Ensembl, Uniprot, Phytozome, Vectorbase, Gramene, Pancreatic Expression Database and Reactome through the Bio Portal:</p>
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+                <div class="news right yellow">
+                    <h3>Ensembl 71, Ensembl Genomes 18, Cosmic 64, Vega 51, UniProt and ICGC Dataset Version 12 now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>June 1st 2013</span></p>
+                        <p>You can access the new versions of Ensembl 71, Ensembl Genomes 18, Cosmic 64, Vega 51 and UniProt through the Bio Portal:</p>                    
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                        <p>ICGC Dataset Version 12 can be accessed through the Cancer Portal:</p>                    
+                        <p><a href="http://dcc.icgc.org/web/" target="_blank">http://dcc.icgc.org/web/</a></p>
+                    </div>                    
+                </div>
+                <div class="year y2013">
+                    <span>2013</span>
+                </div>                
+                <div class="news left yellow">
+                    <h3>Ensembl Genomes Release 16 now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Nov 26th 2012</span></p>
+                        <p>You can access Ensembl Genomes Release 16 through the Bio Portal:</p>                    
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>Ensembl Release 69 database now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Nov 26th 2012</span></p>
+                        <p>You can access Ensembl Release 16 through the Bio Portal:</p>                 
+                        <p><a href="http://central.biomart.org/" target="_blank">http://central.biomart.org/</a></p>
+                    </div>                    
+                </div>
+                <div class="news left black">
+                    <h3>ICGC Release 10 now available through Cancer Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Nov 8th 2012</span></p>
+                        <p>Release 10! New Spain CLL methylation data. 18 TCGA DBs updated & 2 new DBs. Updates to UK Breast and MDS. 432 new genomes, 7,022 in total. Click the link below for more info:</p>                                        
+                        <p><a href="http://dcc.icgc.org/web/" target="_blank">http://dcc.icgc.org/web/</a></p>
+                    </div>                    
+                </div>
+                <div class="news right yellow">
+                    <h3>Predictive Models of Gene Regulation from High-Throughput Epigenomics Data now available</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Oct 11th 2012</span></p>
+                        <p>Research in the Computational Gene Regulation group within the Research Unit on Biomedical Informatics focuses on the development of computational methods to study the mechanisms of regulation of gene expression.</p>
+                        <p>This group is also part of the European network of excellence on alternative splicing EURASNET.</p>                    
+                        <p>"Predictive Models of Gene Regulation from High-Throughput Epigenomics Data" research paper can be accessed below:</p>
+                        <p><a href="http://www.hindawi.com/journals/cfg/2012/284786/#B34" target="_blank">http://www.hindawi.com/journals/cfg/2012/284786/#B34</a></p>
+                    </div>                    
+                </div>
+                <div class="news left yellow">
+                    <h3>GWAS Central available through Bio Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Oct 3rd 2012</span></p>
+                        <p>GWAS Central provides a centralized compilation of summary level findings from genetic association studies, both large and small.</p>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>RhesusBase now available through Bio Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Sept 16th 2012</span></p>
+                        <p>RhesusBase is a knowledgebase developed by Peking university to facilitate the primate research community.</p>
+                        <p>The database was developed on the basis of the BioMart 0.8 framework to customize and facilitate data download.</p>
+                        <p>It has also recently been featured in an article in Nucleic Acid Research:</p>
+                        <p><a href="http://nar.oxfordjournals.org/content/early/2012/09/08/nar.gks835.full" target="_blank">http://nar.oxfordjournals.org/content/early/2012/09/08/nar.gks835.full</a></p>
+                    </div>                    
+                </div>
+                <div class="news left black">
+                    <h3>ICGC release 9  available through Cancer Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Aug 31st 2012</span></p>
+                        <p>12 TCGA database updated and 6 new databases, includes new data from MAGIC and PedBrain projects. Data from 3,029 new genomes, 6,590 in total.</p>
+                    </div>                    
+                </div>
+                <div class="news right yellow">
+                    <h3>Rfam now available through Bio Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Aug 16th 2012</span></p>
+                        <p>Rfam database of non-coding RNA families has been included into http://central.biomart.org</p>  
+                        <p>The Rfam biomart may be found at: </p>
+                        <p><a href="http://xfam-biomart.sanger.ac.uk/" target="_blank">http://xfam-biomart.sanger.ac.uk/</a></p>
+                        <p>Additional Biomarts for other Xfam resources, such as Pfam are currently in development and will be included in due course.</p>
+                    </div>                    
+                </div>
+                <div class="news left yellow">
+                    <h3>Release 68 Ensembl avaiable through Bio Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Jul 31st 2012</span></p>
+                        <p>This release includes the new mouse assembly (GRCm38) as well as updated patches for the human assembly (GRCh37.p8).</p>  
+                        <p>We introduce the Chinese softshell turtle (Pelodiscus sinensis) as a new species and update the Dog genome to CanFam3.1.</p> 
+                        <p>The ground squirrel has been renamed to Ictidomys tridecemlineatus in line with recent taxonomic reassessments.</p>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>Phytozome v8.0 available through Bio Portal</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Jul 1st 2012</span></p>
+                        <p>Version 8 includes 21 genomes assembled and/or annotated at the JGI, and 9 externally produced genomes.</p> 
+                        <p>Also included are early release access to the Panicum virgatum (switchgrass) genome and annotation, as well as the unannotated assembly of the Cotton D Genome.</p> 
+                        <p>Update genomes include Eucalyptus, Aquilegia, and the grasses maize, rice and Brachypodium. New JGI genomes include the aforementioned Panicum virgatum genome, 
+                            as well as Capsella rubella,and Phaseolus vulgaris, while the external genomes Brassica rapa, flax, and apple make their first appearance in Phytozome.</p>
+                    </div>                    
+                </div>
+                <div class="year y2012">
+                    <span>2012</span>
+                </div>
+                <div class="news left black">
+                    <h3>New BioMart Website Released</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Nov 16th 2011</span></p>
+                        <p>We are pleased to announce the release of the new BioMart website, which has been completely redesigned with improved functionality and graphics. Your feedback is welcome and appreciated.</p>
+                    </div>                    
+                </div>
+                <div class="news right yellow">
+                    <h3>DATABASE Special Issue Dedicated to BioMart</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Nov 11th 2011</span></p>
+                        <p>BioMart is a unique open source data federation technology that provides unified access to distributed databases storing a wide range of data. This DATABASE issue recognizes BioMart's outstanding contributions to bioinformatics and documents the achievements of the BioMart community, which has grown impressively over the last ten years to become what it is today, a collaboration between numerous database projects on five continents: Asia, Australia, Europe, North America and South America.</p>
+                        <p><a href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" target="_blank">http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv</a></p>
+                    </div>                    
+                </div>
+                <div class="news left yellow">
+                    <h3>BioMart v 0.8 rc6</h3>
+                    <div class="news-content">
+                        <p class="date"><span>May 10th 2011</span></p>
+                        <p>This release candidate offers the following features:</p>
+                        <ul>
+                            <li>Supports rudimentary Semantic Web features: OWL-ontologies and SPARQL-queries (details in Section 11.5, "Semantic Web" in the user manual)</li>
+                            <li>Automated command line deployment tool for ICGC nodes</li>
+                            <li>MartConfigurator (MC) supports importing configuration (sources and/or access points) from other 0.8 portal configuration xml file</li>
+                            <li>Improved usability in MC including list view of the access points in the right-hand panel</li>
+                            <li>Better support in backwards compatibility to handle linkouturl and default filter displayname</li>
+                            <li>Bug fixes</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="news right black">
+                    <h3>BioMart v 0.8 rc5</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Mar 11th 2011</span></p>
+                        <p>This release candidate offers the following features:</p>
+                        <ul>
+                            <li>client APIs: Java, REST, SOAP (details in user manual section 11)</li>
+                            <li>full plugin support including both client and server side components</li>
+                            <li>update of materialized mart is now fully supported</li>
+                            <li>better support for virtual mart (schema update and basic manipulations)</li>
+                            <li>improvement of MC usability</li>
+                            <li>user manual includes a dedicated section about ICGC deployment</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="news left black">
+                    <h3>BioMart v 0.8 rc4</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Feb 1st 2011</span></p>
+                        <p>This release is tested on Mac OS X (Leopard and Snow Leapord), Linux (Debian 4.1.1-21), Java 6. See docs for details.</p>
+                        <p>This release candidate offers the following features:</p>
+                        <ul>
+                            <li>Materialize for 5 database platforms (MySQL, Oracle, PgSQL, MS SQL, DB2)</li>
+                            <li>Secure access for BioMart server to server communication</li>
+                            <li>Third party plugins framework for GUI developers</li>
+                            <li>Improved configuration management</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="year y2011">
+                    <span>2011</span>
+                </div>
+                <div class="news right yellow">
+                    <h3>BioMart v 0.8 rc3</h3>
+                    <div class="news-content">
+                        <p class="date"><span>Dec 18th 2010</span></p>
+                        <p>The 0.8 release candidate 3 is now available for deployer testing. The new BioMart version is a Java based, out-of-the-box single integrated application to facilitate mart building, configuration and web server deployment.</p>
+                        <p>This release candidate offers the following features: </p>
+                        <ul>
+                            <li>Support for 5 database platforms (MySQL, Oracle, PgSQL, MS SQL, DB2)</li>
+                            <li>Virtual Marts (non-materialised querying against source database)</li>
+                            <li>A range of different web interfaces from Basic Form to Advanced Querying interfaces (MartAnalysis, MartForm, MartWizard, MartExplorer) and a Report page (MartReport)</li>
+                            <li>Backwards compatibility for BioMart 0.7 sources</li>
+                            <li>Secure access</li>
+                            <li>Multi-dataset linking with Link-Indices for faster and scalable joins</li>
+                            <li>Processor framework for specialised data visualisations (e.g charts) </li>
+                        </ul>
+                        <p>Features not available yet:</p>
+                        <ul>
+                            <li>Full Mbuilder component including source schema modifications</li>
+                            <li>Updates</li>
+                            <li>Processors (Genomic Sequence, GFF, DAS, WSDL, Gzip, Excel)</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="year y2010">
+                    <span>2010</span>
+                </div>
+                <div class="news left yellow">
+                    <h3>BioMart v 0.7</h3>
+                    <div class="news-content">
+                        <p class="date"><span>May 14th 2008</span></p>
+                        <p>This release candidate offers the following features:</p>
+                        <ul>
+                            <li>MartBuilder is now a fully featured application with enhanced layout for schema transformation. It can also run in a server/client mode making it possible to monitor the mart building process through a MartRunner component.</li>
+                            <li>MartView layout has been improved. Programmatic access has been extended to include URL API functionality and mapping from XML queries to URL API. The long outstanding problem with MartEditor templates has been fixed.</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="year y2008">
+                    <span>2008</span>
+                </div>
+                <div class="news right black">
+                    <h3>BioMart v 0.6</h3>
+                    <div class="news-content">
+                        <p class="date"><span>June 15th 2007</span></p>
+                        <p>This release candidate offers the following features:</p>
+                        <ul>
+                            <li>BioMart can now be used as a 1.5 DAS annotation server. The server can be configured using standard BioMart configuration tools without requiring to do any additional programming.</li>
+                            <li>MartView comes with an improved layout and better interactivity. The response times for the results panel have been considerably improved for datasets with large configuration, and the results come with an 'unique rows' option. In addition to the existing web service XML button, MartView now features a Perl button which shows the query in Perl API format. </li>
+                            <li>MartBuilder now allows you to execute, monitor and control your transformation SQL remotely. Improved schema diagrams provide more compact overviews, and improved dataset diagrams provide a clearer picture of the dataset structure. In addition, the user has more options for modifying created datasets and better information about them in 'explain dataset' and 'explain table' dialogs.</li>
+
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="year y2007">
+                    <span>2007</span>
+                </div>
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </body>
+</html>
