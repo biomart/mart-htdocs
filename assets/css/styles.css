@@ -1497,6 +1497,10 @@ html.load .map-container .country{
     font-family: open_sanslight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.credits .community-table.developers{
+    margin-top:20px;
+}
+
 .credits .community-table table td{
     padding:15px;
     width:320px;
