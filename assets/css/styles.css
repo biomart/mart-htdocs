@@ -109,10 +109,9 @@ body{
     position:absolute;
 }
 
-@media all and (min-width: 1680px) {
+@media all and (min-width: 1400px) {
     .header{
         position: fixed;
-        background:pink;
     }
 }
 
@@ -1790,4 +1789,32 @@ color: #fff;
 
 html.publications.load .community-table table tr{
     cursor:pointer !important;
+}
+
+
+
+
+body{
+    min-width:1400px;
+}
+
+.main-content{
+    max-width: 1150px;
+overflow: hidden;
+
+}
+
+.header .latest-news {
+padding-left: 290px;
+left:0;
+}
+
+.credits table {
+    margin-left:-20px;
+}
+
+.credits .community-table table td a img,
+.credits .community-table table td a .image-container {
+    width:303px;
+    height:303px;
 }
