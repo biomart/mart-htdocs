@@ -1818,3 +1818,31 @@ left:0;
     width:303px;
     height:303px;
 }
+
+
+.credits .community-table.developers a{
+    /*padding-left:15px;*/
+    position:relative;
+     font-family: open_sanssemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*.credits .community-table.developers a:before{
+content: url(../images/red-arrow-right.png);
+position: absolute;
+left: -10px;
+top: 1px;
+-webkit-transition: all 0s;
+transition: all 0s;
+opacity: 0;
+}
+
+.credits .community-table.developers a:after{
+content: url(../images/red-arrow-right.png);
+position: absolute;
+left: 0px;
+top: 1px;
+-webkit-transition: all 0s;
+transition: all 0s;
+opacity: 1;
+}*/
