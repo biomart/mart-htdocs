@@ -1826,6 +1826,10 @@ left:0;
      font-family: open_sanssemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.citing-biomart{
+  padding-bottom:50px !important;  
+}
+
 
 /*.credits .community-table.developers a:before{
 content: url(../images/red-arrow-right.png);
