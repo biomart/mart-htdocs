@@ -103,7 +103,13 @@ body{
     left:0;
     padding-left: 280px;
     min-width: 1400px;
-    -webkit-transition: top 0.6s; transition: top 0.6s;
+    
+
+     -webkit-transition: top 0.6s;
+    -moz-transition: top 0.6s;
+    -o-transition: top 0.6s;
+    transition: top 0.6s;
+
     box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.4);
 
     position:absolute;
@@ -148,7 +154,13 @@ body{
     position:absolute;
     right:-10px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+
     opacity:0;
 }
 .header .latest-news span:after{
@@ -156,19 +168,33 @@ body{
     position:absolute;
     right:-20px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
     opacity:1;
 }
 
 .header .latest-news span:hover:before{
     right:-20px;
     opacity:1;
-    -webkit-transition: all .3s; transition: all .3s;
+    
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 .header .latest-news span:hover:after{
     opacity:0;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+     -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
 }
 
 .header .download {
@@ -245,7 +271,12 @@ animation: huerotate 15s infinite linear;*/
     font-family: open_sansregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform:uppercase;
     opacity:0.4;
-    -webkit-transition: opacity 1s; transition: opacity 1s;
+    
+
+     -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }
 
 .site_context .publications a.nature{
@@ -304,13 +335,24 @@ animation: huerotate 15s infinite linear;*/
     margin:0;
     font-weight:normal;
     position:relative;
-    -webkit-transition: all 0.6s 0.3s; transition: all 0.6s 0.3s;
+    
+
+    -webkit-transition: all 0.6s 0.3s;
+    -moz-transition: all 0.6s 0.3s;
+    -o-transition: all 0.6s 0.3s;
+    transition: all 0.6s 0.3s;
 
 }
 
 .main_nav ul li.selected{
     background:#13151A;
-    -webkit-transition: all 0.3s; transition: all 0.3s;
+    
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
     box-shadow:         inset 0 0 10px #000000;
     border-bottom:1px solid #2C313A;
 }
@@ -320,14 +362,25 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     top:18px;
     right:-14px;
-    -webkit-transition: right 0.3s, opacity 0s .3s; transition: right 0.3s, opacity 0s .3s;
+    
+
+     -webkit-transition: right 0.3s, opacity 0s .3s;
+    -moz-transition: right 0.3s, opacity 0s .3s;
+    -o-transition: right 0.3s, opacity 0s .3s;
+    transition: right 0.3s, opacity 0s .3s;
+
     opacity:0;
 }
 
 .main_nav ul li.selected:after{
     right:0;    
     opacity:1;
-    -webkit-transition: right 0.3s, opacity 0s; transition: right 0.3s, opacity 0s;
+    
+
+     -webkit-transition: right 0.3s, opacity 0s;
+    -moz-transition: right 0.3s, opacity 0s;
+    -o-transition: right 0.3s, opacity 0s;
+    transition: right 0.3s, opacity 0s;
 }
 
 .main_nav ul li ul li:after{
@@ -469,7 +522,13 @@ animation: huerotate 15s infinite linear;*/
     background: #22262E;
     display:inline-block;
     position:relative;
-    -webkit-transition: all 0.3s; transition: all 0.3s;
+    
+
+      -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
     box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.4);
 }
 
@@ -573,7 +632,13 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     left:-10px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+     -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+
     opacity:0;
 }
 
@@ -582,19 +647,37 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     left:0px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+
     opacity:1;
 }
 
 .main-content .intro .right .join-community div a:hover:before{
     left:0px;
     opacity:1;
-    -webkit-transition: all .3s; transition: all .3s;
+    
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
 }
 
 .main-content .intro .right .join-community div a:hover:after{
     opacity:0;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+
 }
 
 .map-section{
@@ -627,7 +710,13 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     left:-10px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+     -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+
     opacity:0;
 }
 
@@ -636,19 +725,34 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     left:0px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
     opacity:1;
 }
 
 .map-section table td:first-child a:hover:before{
     left:0px;
     opacity:1;
-    -webkit-transition: all .3s; transition: all .3s;
+    
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 .map-section table td:first-child a:hover:after{
     opacity:0;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+      -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
 }
 
 .map-section h3 {
@@ -668,6 +772,7 @@ animation: huerotate 15s infinite linear;*/
 
 .map-section h3  strong{
     font-family: open_sanssemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight:normal;
 }
 
 .map-section td.display{
@@ -711,7 +816,11 @@ html.load .map-container .country{
     background: url(../images/uk.png) no-repeat 50% 50%;    
     top: 57px;
     left: 247px;
-    -webkit-transition: opacity .8s 0.2s; transition: opacity .8s 0.2s;
+
+    -webkit-transition: opacity .8s 0.2s;
+    -moz-transition: opacity .8s 0.2s;
+    -o-transition: opacity .8s 0.2s;
+    transition: opacity .8s 0.2s;
 }
 .map-container .canada{
     width:125px;
@@ -719,7 +828,11 @@ html.load .map-container .country{
     background: url(../images/canada.png) no-repeat 50% 50%;    
     top: 26px;
     left: 41px;
-    -webkit-transition: opacity .8s .4s; transition: opacity .8s .4s;
+
+    -webkit-transition: opacity .8s .4s;
+    -moz-transition: opacity .8s .4s;
+    -o-transition: opacity .8s .4s;
+    transition: opacity .8s .4s;
 }
 
 .map-container .chile{
@@ -728,7 +841,11 @@ html.load .map-container .country{
     background: url(../images/chile.png) no-repeat 50% 50%;    
     top: 219px;
     left: 118px;
-    -webkit-transition: opacity .8s .6s; transition: opacity .8s .6s;
+
+    -webkit-transition: opacity .8s .6s;
+    -moz-transition: opacity .8s .6s;
+    -o-transition: opacity .8s .6s;
+    transition: opacity .8s .6s;
 }
 
 .map-container .china{
@@ -737,7 +854,11 @@ html.load .map-container .country{
     background: url(../images/china.png) no-repeat 50% 50%;    
     top: 65px;
     left: 397px;
-    -webkit-transition: opacity .8s .8s; transition: opacity .8s .8s;
+
+     -webkit-transition: opacity .8s .8s;
+    -moz-transition: opacity .8s .8s;
+    -o-transition: opacity .8s .8s;
+    transition: opacity .8s .8s;
 }
 
 .map-container .france{
@@ -746,7 +867,10 @@ html.load .map-container .country{
     background: url(../images/france.png) no-repeat 50% 50%;    
     top: 70px;
     left: 251px;
-    -webkit-transition: opacity .8s 1s; transition: opacity .8s 1s;
+    -webkit-transition: opacity .8s 1s;
+    -moz-transition: opacity .8s 1s;
+    -o-transition: opacity .8s 1s;
+    transition: opacity .8s 1s;
 }
 
 .map-container .italy{
@@ -755,7 +879,11 @@ html.load .map-container .country{
     background: url(../images/italy.png) no-repeat 50% 50%;    
     top: 78px;
     left: 273px;
-    -webkit-transition: opacity .8s 1.2s; transition: opacity .8s 1.2s;
+    
+    -webkit-transition: opacity .8s 1.2s;
+    -moz-transition: opacity .8s 1.2s;
+    -o-transition: opacity .8s 1.2s;
+    transition: opacity .8s 1.2s;
 }
 
 .map-container .japan{
@@ -764,7 +892,11 @@ html.load .map-container .country{
     background: url(../images/japan.png) no-repeat 50% 50%;    
     top: 82px;
     left: 505px;
-    -webkit-transition: opacity .8s 1.4s; transition: opacity .8s 1.4s;
+    
+    -webkit-transition: opacity .8s 1.4s;
+    -moz-transition: opacity .8s 1.4s;
+    -o-transition: opacity .8s 1.4s;
+    transition: opacity .8s 1.4s;
 }
 
 .map-container .korea{
@@ -773,7 +905,12 @@ html.load .map-container .country{
     background: url(../images/korea.png) no-repeat 50% 50%;    
     top: 95px;
     left: 488px;
-    -webkit-transition: opacity .8s 1.6s; transition: opacity .8s 1.6s;
+    
+
+    -webkit-transition: opacity .8s 1.6s;
+    -moz-transition: opacity .8s 1.6s;
+    -o-transition: opacity .8s 1.6s;
+    transition: opacity .8s 1.6s;
 }
 
 .map-container .peru{
@@ -782,7 +919,13 @@ html.load .map-container .country{
     background: url(../images/peru.png) no-repeat 50% 50%;    
     top: 181px;
     left: 97px;
-    -webkit-transition: opacity .8s 1.8s; transition: opacity .8s 1.8s;
+    
+
+
+    -webkit-transition: opacity .8s 1.8s;
+    -moz-transition: opacity .8s 1.8s;
+    -o-transition: opacity .8s 1.8s;
+    transition: opacity .8s 1.8s;
 }
 
 .map-container .spain{
@@ -791,7 +934,12 @@ html.load .map-container .country{
     background: url(../images/spain.png) no-repeat 50% 50%;    
     top: 83px;
     left: 243px;
-    -webkit-transition: opacity .8s 2s; transition: opacity .8s 2s;
+    
+
+    -webkit-transition: opacity .8s 2s;
+    -moz-transition: opacity .8s 2s;
+    -o-transition: opacity .8s 2s;
+    transition: opacity .8s 2s;
 }
 
 .map-container .usa{
@@ -800,7 +948,12 @@ html.load .map-container .country{
     background: url(../images/usa.png) no-repeat 50% 50%;    
     top: 74px;
     left: 29px;
-    -webkit-transition: opacity .8s 2.2s; transition: opacity .8s 2.2s;
+    
+
+    -webkit-transition: opacity .8s 2.2s;
+    -moz-transition: opacity .8s 2.2s;
+    -o-transition: opacity .8s 2.2s;
+    transition: opacity .8s 2.2s;
 }
 
 .map_pin {
@@ -814,7 +967,12 @@ html.load .map-container .country{
 
     -webkit-transform-origin: 50% 50%; -webkit-transform: rotate(8deg) translate3d(0,0,0) scale(1);
     transform-origin: 50% 50%; transform: rotate(8deg) translate3d(0,0,0) scale(1);
-    -webkit-transition: all .6s; transition: all .6s;
+    
+
+     -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
 }
 
 .map_label {
@@ -828,7 +986,12 @@ html.load .map-container .country{
 
     -webkit-transform-origin: 50% 50%; -webkit-transform: translate3d(0,0,0) scale(0.9);
     transform-origin: 50% 50%; transform: translate3d(0,0,0) scale(0.9);
-    -webkit-transition: all .6s; transition: all .6s;
+    
+
+     -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
     opacity: 0;
 
     font-family: open_sanssemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -866,7 +1029,11 @@ html.load .map-container .country{
     -webkit-transform-origin: 50% 50%; -webkit-transform: scale(0.8);
     transform-origin: 50% 50%; transform: scale(0.8);
     opacity: 0;
-    -webkit-transition: all .6s; transition: all .6s;
+    
+     -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
 }
 
 .country:hover .map_pin:before, .country.selected .map_pin:before {
@@ -923,8 +1090,12 @@ html.load .map-container .country{
 .tool-icons a img{
     -webkit-transform: translate3d(0, 0, 0) scale(0.85);
     transform: translate3d(0, 0, 0) scale(0.85);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.3s ease-in-out;
+   
+
+     -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
 }
 .tool-icons a:hover img{
@@ -1067,7 +1238,12 @@ html.load .map-container .country{
     position:absolute;
     left:0;
     bottom:-8px;
-    -webkit-transition: width 0.6s; transition: width 0.6s;
+    
+
+    -webkit-transition: width 0.6s;
+    -moz-transition: width 0.6s;
+    -o-transition: width 0.6s;
+    transition: width 0.6s;
 }
 
 .community-table  table tbody tr:hover td b:before{
@@ -1118,7 +1294,12 @@ html.load .map-container .country{
     height:212px;
     background:url(../images/featured3.jpg) no-repeat 0% 0%;
     opacity:0.25;
-    -webkit-transition: opacity 1s; transition: opacity 1s;
+    
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }
 
 .publications .display:hover .image-container{
@@ -1235,7 +1416,12 @@ html.load .map-container .country{
     position:absolute;
     left:-10px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
     opacity:0;
 }
 
@@ -1244,7 +1430,12 @@ html.load .map-container .country{
     position:absolute;
     left:0px;
     top:1px;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
     opacity:1;
 }
 
@@ -1253,12 +1444,22 @@ html.load .map-container .country{
 .download .community-table a:hover:before, .intro ul li:hover:before{
     left:0px;
     opacity:1;
-    -webkit-transition: all .3s; transition: all .3s;
+    
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 .download .community-table a:hover:after, .intro ul li:hover:after{
     opacity:0;
-    -webkit-transition: all 0s; transition: all 0s;
+    
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
 }
 
 
@@ -1393,7 +1594,11 @@ html.load .map-container .country{
     position: absolute;
     left: 0;
     bottom: -8px;
-    -webkit-transition: width 0.6s;
+    
+
+     -webkit-transition: width 0.6s;
+    -moz-transition: width 0.6s;
+    -o-transition: width 0.6s;
     transition: width 0.6s;
 }
 
@@ -1435,7 +1640,12 @@ html.load .map-container .country{
     top:50%;
     margin-top:-15px;
     right:-10px;
-    -webkit-transition: all 0.3s .3s; transition: all 0.3s;  
+    
+
+     -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /*.timeline .news:hover h3:after{
@@ -1531,8 +1741,13 @@ html.load .map-container .country{
 .credits .community-table table td a img{
     -webkit-transform: translate3d(0, 0, 0) scale(0.9);
     transform: translate3d(0, 0, 0) scale(0.9);
+   
+
+
     -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
 }
 .credits .community-table table td a:hover img{
@@ -1850,3 +2065,8 @@ top: 1px;
 transition: all 0s;
 opacity: 1;
 }*/
+
+
+img{
+    border:none !important;
+}
