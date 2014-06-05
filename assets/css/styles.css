@@ -289,7 +289,7 @@ animation: huerotate 15s infinite linear;*/
 }
 
 .logo{
-    background:url(../images/logo.png) no-repeat 50% 50% #1B1E24;    
+    background:url(../images/logo-white.png) no-repeat 50% 50% #1B1E24;    
     width: 280px;
     height: 100px;
     margin: 0;
