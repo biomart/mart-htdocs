@@ -199,7 +199,7 @@
         <div class="main-content section">
             <div class="intro">
                 <h1><span>MartService</span></h1>
-                <h2><span>How it works</span></h2>
+                <h2><span>Quick start guide for versions 0.7 and 0.9</span></h2>
                 <!--<div class="left sub-section">
                     <p>The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse.</p>                    
                 </div>
@@ -212,10 +212,10 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="left sub-section">
+                <!--<div class="left sub-section">
                     <p>The following instructions cover REST and SOAP access for both version 0.7 and 0.9.</p>
                     <p>Any syntax differences between v0.7 and v0.9 will be highlighted below.</p>                         
-                </div>
+                </div>-->
             </div>
             <div class="community-table by-team">    
                               
@@ -228,10 +228,9 @@
                     <tbody>
                         <tr>
                             <td>
-                                <h3>Querying Biomart</h3>                                
+                                <h3>Quick Start</h3>                                
                                 <div class="content">
-                                    <p>Querying Biomart is a simple two step process, first create and save your query, then run it using syntax compatible to your version of Biomart. We've included an example query to get you started.</p>
-                                    <h4><span>Create query</span></h4>
+                                    <h4><span>Example Query</span></h4>
                                     <p>Save our query example below as query.xml</p>
                                     <div class="command">&lt;!DOCTYPE Query>&lt;Query client="true" processor="TSV" limit="-1" header="1">&lt;Dataset name="hsapiens_gene_ensembl" config="gene_ensembl_config">&lt;Filter name="chromosome_name" value="1" filter_list=""/>&lt;Attribute name="ensembl_gene_id"/>&lt;Attribute name="ensembl_transcript_id"/>&lt;/Dataset>&lt;/Query></div>
                                     <h4><span>Run Query</span></h4>
@@ -249,9 +248,8 @@
                                     <p>Now that you're up and running you might like to try out different queries.</p>
                                     <p>There are 2 ways to do this, you can use our GUI or access our meta data programmatically. We've outlined both methods below:</p>
                                     <h4><span>GUI</span></h4>
-                                    <p>You can compile different queries using our web GUI, click the link below:</p>
-                                    <p><a target="_blank" href="http://central.biomart.org/martwizard/#!/Search_by_database_name?mart=Ensembl 77 Genes (WTSI, UK)">http://central.biomart.org/martwizard/#!/Search_by_database_name?mart=Ensembl 77 Genes (WTSI, UK)</a></p>
-                                    <p>Follow the steps outlined by the GUI, after clicking the 'results' button, click REST/SOAP button and save the query as query.xml</p>
+                                    <p>You can compile different queries using our <a target="_blank" href="http://central.biomart.org/martwizard/#!/Search_by_database_name?mart=Ensembl 77 Genes (WTSI, UK)">web GUI</a></p>
+                                    <p>Follow the steps outlined by the GUI. After clicking the 'results' button, click the REST/SOAP button and save the query as query.xml. Finally run the query as explained in the Quick Start block, substituting the example query with your new query.xml.</p>
 
                                     <h4><span>Programmatic Access</span></h4>
                                     <p>If you need programmatic access to all the datasets, fitlers and attributes follow this link links below, respective of your Biomart service version.</p>
@@ -273,44 +271,6 @@
                                         <li>filters available for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl</a></li>
                                         <li>configuration for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl</a></li>
                                     </ul>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h3>RESTful Access</h3>
-                                <div class="content">
-                                    <h4><span>Querying BioMart</span></h4>
-                                    <p>To submit a query using our webservices generate an XML document conforming to our Query XML syntax. This can be achieved simply by building up your query using MartView and hitting the XML button. This XML should be posted to /martservice attached to a single parameter of query. For example you could either:</p>
-                                    <ul>
-                                        <li>save your query as Query.xml and then POST this using the <a class="ignore-margin" href="http://cvs.sanger.ac.uk/cgi-bin/viewvc.cgi/biomart-perl/scripts/webExample.pl?revision=1.3&root=biomart&view=markup&pathrev=release-0_7">webExample.pl</a> script in our biomart-perl/scripts installation.</li>
-                                        <li>submit using wget: <div class="command">wget -O results.txt '/biomart/martservice?query=MY_XML'</div> replacing MY_XML with the XML obtained above, first removing any new lines.</li>
-                                    </ul>
-                                    <h4><span>Retrieving Meta Data</span></h4>
-                                    <ul>
-                                        <li>registry information:<br/><a href="http://www.biomart.org/biomart/martservice?type=registry" target="_blank" class="no-bg">/biomart/martservice?type=registry</a></li>
-                                        <li>datasets available for a mart:<br/><a href="http://www.biomart.org/biomart/martservice?type=datasets&mart=ensembl" target="_blank" class="no-bg">/biomart/martservice?type=datasets&mart=ensembl</a></li>
-                                        <li>attributes available for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=attributes&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">/biomart/martservice?type=attributes&dataset=oanatinus_gene_ensembl</a></li>
-                                        <li>filters available for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl</a></li>
-                                        <li>configuration for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>
-                                <h3>SOAP Access</h3>
-                                <div class="content">
-                                    <p>The SOAP based access is functionally equivalent to the REST style access described above. For description on BioMart SOAP based Web Service (MartServiceSoap), see:</p>
-                                    <ul>
-                                        <li>MartServiceSoap Endpoint (for SOAP based access only):<br/><a href="http://www.biomart.org/biomart/martsoap" target="_blank" class="no-bg">/biomart/martsoap</a></li>
-                                        <li>MartServiceSoap WSDL:<br/><a href="http://www.biomart.org/biomart/martwsdl" target="_blank" class="no-bg">/biomart/martwsdl</a></li>
-                                        <li>MartServiceSoap XSD:<br/><a href="http://www.biomart.org/biomart/martxsd" target="_blank" class="no-bg">/biomart/martxsd</a></li>
-                                    </ul>
-
                                 </div>
                             </td>
                         </tr>
