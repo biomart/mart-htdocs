@@ -76,6 +76,8 @@
                 setTimeout(function() {
                     $('.uk').addClass('selected');
 
+                    $('html').addClass('map-loaded');
+
                     $('.country:not(.uk)').hover(function() {
                         $('.uk').removeClass('selected');
                         $('.country').unbind('mouseenter mouseleave');
@@ -236,47 +238,47 @@
                                 <div class="map-container">
                                     <div class="uk country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>UK</strong> 23</div>
+                                        <div class="map_label"><strong>UK</strong><p>BCCTB Bioninformatics Portal, COSMIC, DAPPER, EMAGE, Ensembl, Ensembl Genomes, Eurexpress, EuroPhenome, GWAS Central, HGNC, InterPro, Pancreatic Expression Database, Rfam, UniProt, VEGA</p></div>
                                     </div>
-                                    <div class="canada country">
+                                    <!--<div class="canada country">
                                         <div class="map_pin"></div>
                                         <div class="map_label"><strong>CANADA</strong> 1</div>
-                                    </div>
+                                    </div>-->
                                     <div class="chile country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>CHILE</strong> 1</div>
+                                        <div class="map_label"><strong>CHILE</strong><p>SalmonDB</p></div>
                                     </div>
                                     <div class="china country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>CHINA</strong> 2</div>
+                                        <div class="map_label"><strong>CHINA</strong><p>RhesusBase, Rice-Map</p></div>
                                     </div>
                                     <div class="france country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>FRANCE</strong> 5</div>
+                                        <div class="map_label"><strong>FRANCE</strong><p>Cildb, GermOnline, GnpIS, ParameciumDB, sigReannot</p></div>
                                     </div>
                                     <div class="italy country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>ITALY</strong> 1</div>
+                                        <div class="map_label"><strong>ITALY</strong><p>AURA</p></div>
                                     </div>
                                     <div class="japan country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>JAPAN</strong> 1</div>
+                                        <div class="map_label"><strong>JAPAN</strong><p>KazusaMart</p></div>
                                     </div>
                                     <div class="korea country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>SOUTH KOREA</strong> 1</div>
+                                        <div class="map_label"><strong>SOUTH KOREA</strong><p>i-Pharm</p></div>
                                     </div>
                                     <div class="peru country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>PERU</strong> 1</div>
+                                        <div class="map_label"><strong>PERU</strong><p>Potato Database</p></div>
                                     </div>
                                     <div class="spain country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>SPAIN</strong> 2</div>
+                                        <div class="map_label"><strong>SPAIN</strong><p>Predictive Models of Gene Regulation</p></div>
                                     </div>
                                     <div class="usa country">
                                         <div class="map_pin"></div>
-                                        <div class="map_label"><strong>USA</strong> 8</div>
+                                        <div class="map_label"><strong>USA</strong><p>Animal Genome databases, Gramene, HapMap,  MGI, Phytozome, VectorBase, WormBase</p></div>
                                     </div>
                                 </div>
                             </td>

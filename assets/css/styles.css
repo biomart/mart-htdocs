@@ -793,6 +793,8 @@ animation: huerotate 15s infinite linear;*/
     position:absolute;
     opacity:0.6;
     opacity:0;
+
+    overflow:hidden;
     /*-webkit-transition: all .2s; transition: all .2s;*/
 
 }
@@ -806,8 +808,15 @@ html.load .map-container .country{
     opacity:1 !important;
 
     z-index:2;
+    overflow:visible;
 }
 
+html.map-loaded .map-container .country{
+    -webkit-transition: opacity .8s 0.2s;
+    -moz-transition: opacity .8s 0.2s;
+    -o-transition: opacity .8s 0.2s;
+    transition: opacity .8s 0.2s;
+}
 
 
 .map-container .uk{
@@ -905,6 +914,10 @@ html.load .map-container .country{
     background: url(../images/korea.png) no-repeat 50% 50%;    
     top: 95px;
     left: 488px;
+
+    height:12px;
+    top: 93px;
+left: 488px;
     
 
     -webkit-transition: opacity .8s 1.6s;
@@ -997,6 +1010,26 @@ html.load .map-container .country{
     font-family: open_sanssemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:11px;
     text-transform:uppercase;
+
+    text-align:left;
+    text-transform: none;
+    width:250px;
+}
+
+.map_label{
+    
+}
+
+.map_label p{
+    margin:0;
+    padding:10px 10px 10px 10px;
+    line-height:16px;
+}
+
+.map_label strong{
+    display:block;
+    text-transform: uppercase;
+    padding:10px 10px 0 10px;
 }
 
 /*.canada .map_label,
@@ -1011,8 +1044,19 @@ html.load .map-container .country{
 }*/
 
 .korea .map_label{
-    width:110px;
+/*    width:110px;*/
 }
+
+.korea .map_label,
+.china .map_label,
+.japan .map_label{
+    margin-left:0;
+    margin-right:50px;
+    left:auto;
+    right:50%;
+}
+
+
 
 .map_label strong{
     font-family: open_sansextrabold, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1040,6 +1084,12 @@ html.load .map-container .country{
     -webkit-transform: scale(1.1); transform: scale(1.1);
     opacity: 1;
     box-shadow: 0 0 0 5px rgba(255,255,255,0.6), 0 0 0 9px rgba(255,204,0,0.3);
+}
+
+.country.selected{
+    overflow:visible;
+    opacity:1 !important;
+    z-index:2;
 }
 
 .country:hover .map_pin, .country.selected .map_pin {
