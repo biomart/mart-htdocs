@@ -1773,11 +1773,15 @@ left: 488px;
     padding:15px;
     width:320px;
     text-align:center;
+    width:258px;
+    vertical-align:top;
 }
 
 .credits .community-table table td a .image-container{
     width:320px;
     height:320px;
+    width:258px;
+    width:258px;
     background:#fff;
     display:block;
     margin-bottom:15px;
@@ -2082,6 +2086,9 @@ left:0;
 .credits .community-table table td a .image-container {
     width:303px;
     height:303px;
+
+    width:215px;
+    height:215px;
 }
 
 
