@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" class="community">
+    <head>
+        <!-- meta information -->
+        <meta charset="utf-8" />
+        <meta name="author"
+              content="BioMart" />
+        <meta name="description"
+              content="The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse." />
+        <meta name="robots"
+              content="index,follow" />
+        <meta name="revisit-after"
+              content="14 days" />
+        <meta name="country"
+              content="UK" />
+        <meta name="language"
+              content="en-GB" />
+
+        <!-- Who worked on this? -->
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1">
+
+        <!-- Styling for all devices -->
+        <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
+
+        <!-- Favicons [ See: http://www.jonathantneal.com/blog/understand-the-favicon/ ]
+             TL;DR: put a 32x32 favicon.ico file in root for IE, everything else uses the PNGs declared here -->
+        <!-- Favicon for Apple -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <!-- Win8 tiles -->
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-tileicon.png" />
+        <!-- Favicon for everything else -->
+        <link rel="icon" href="/assets/images/favicon.png" />
+
+        <!-- The Adaptive-Images JavaScript
+             NOTE:      Used to automatically provide re-scaled images appropriate to the visitors device
+             REFERENCE: http://adaptive-images.com -->
+        <script>document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+
+        <!-- google analytics
+             NOTE:      This goes in the head because it's the asynchronous loader, read more here:
+             REFERENCE: http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html -->
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30592404-1']);
+  _gaq.push(['_setDomainName', 'biomart.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+        <!-- Modernizr also goes in the head, to allow the HTML5 shiv to work for IE, and prevent FOUC.
+             REFERENCE: http://www.modernizr.com/docs/#installing -->
+
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            $(window).load(function() {
+                $('html').addClass('load');
+
+                $('.site_context .menu li.selected > a').click();
+
+                setTimeout(function() {
+                    $('.uk').addClass('selected');
+
+                    $('.country:not(.uk)').hover(function() {
+                        $('.uk').removeClass('selected');
+                        $('.country').unbind('mouseenter mouseleave');
+                    });
+                }, 3000);
+
+            });
+
+            $(document).ready(function() {
+                $(document).scroll(function() {
+
+                    var top = $(document).scrollTop();
+                    if (top <= 10)
+                        $('.header, .site_context').removeClass('shrink');
+                    if (top > 10)
+                        $('.header, .site_context').addClass('shrink');
+
+
+
+                });
+            });
+        </script>
+
+        <title>BioMart</title>
+
+    </head>
+    <body>
+        <div class="site_context">
+            <!--<a href="#" class="logo">Biomart</a>-->
+            <div class="main_nav">
+                <h2>Navigation</h2>
+                <ul class="menu collapsible">
+                    <li class="">
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Tools</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/notice.html">browse data</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">id conversion</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">sequence retrieval</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">enrichment analysis</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/martservice_9.html">Web Service</a>
+                    </li>
+                    <li class="selected">
+                        <a href="/community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="/publications.html">Publications</a>
+                    </li>
+                    <li>
+                        <a href="/news.html">News</a>
+                    </li>            
+                    <li class="credits">
+                        <a href="/credits.html">Credits</a>                       
+                    </li>
+                    <li>
+                        <a target="_blank" href="/other/biomart_0.9_0_documentation.pdf">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">version 0.7</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/notice.html">Portal</a>
+                            </li>
+                            <li>
+                                <a href="/other/install-overview.html">Quick Install</a>
+                            </li>
+                            <li>
+                                <a href="/other/user-docs.pdf">Complete Docs</a>
+                            </li>
+                            <!--<li>
+                                <a href="/martservice.html">MartService Docs</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="acitem">
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users Mailing List</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-announce">Announce Mailing List</a>
+                            </li>
+                            <!--<li>
+                                <p>If you have any inquiries regarding our software or services please post it to the <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users mailing list</a></p>
+                                <p>For any other inquiries please email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query">Arek Kasprzyk</a></p>
+                            </li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="publications">
+                <span class="read-more">read more</span>
+                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" class="database">
+                    <img src="assets/images/pub-db.png" />
+                    <span>special issue<br/>dedicated to BioMart</span>
+                </a>
+                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" class="nature">
+                    <img src="assets/images/pub-nature.png" />
+                    <span>BioMart in<br/>nature methods</span>
+                </a>
+            </div>
+        </div>
+        <div class="header section">
+            <a href="/" class="logo">BioMart</a>
+            <a href="/download.html" class="download">Download<span>v 0.9</span></a>
+            <a href="/news.html" class="latest-news"><span>[4th January 2016] OASIS in Nature Methods</span></a>            
+        </div>
+        <div class="main-content section">
+            <div class="intro">
+                <h1><span>Announcement</span></h1>
+                <h2><span>BioMart community portal temporarily unavailable</span></h2>
+                <p>We are in the process of migrating hosting, during which time the BioMart community portal will be temporarily unavailable.</p>
+                <p>However, you can still access BioMart services at any of the BioMart community servers. The list of those servers is listed in the table below. The link to the server can be found under 'Database' heading. For example, if you are interested in using the latest Ensembl release through BioMart web interface simply click on 'Ensembl' and the link will take you to http://www.ensembl.org/biomart/martview. If you are a user of biomaRt (a part of the Bioconductor library) change the host from 'www.biomart.org' to 'www.ensembl.org'. Similar procedure can be used for all the other community servers.</p>
+                <p>We apologise for any inconvenience caused.</p>
+                <!--<div class="left sub-section">
+                    <p>The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse.</p>
+                    
+                </div>
+                <div class="right sub-section">
+                    <div class="join-community">
+                        <h3>Join our community</h3>
+                        <div>
+                            <span>download our software to join</span>
+                            <a href="/download.html">download now</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="community-table">
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                Location
+                            </th>
+                            <th>
+                                Database
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--<tr class="separate top bottom">
+                            <td class="left">
+                                <a href="http://www.bsc.es/" target="_blank" title="Click to view the location homepage"><b>Barcelona Supercomputing Center, Spain</b></a>
+                            </td>
+                            <td>
+                                <a href="http://dcc.cllgenome.es/" target="_blank" title="Click to go directly to the database">ICGC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://dcc.cllgenome.es/" target="_blank" title="Click to read a more detailed description">Catalogue of genomic abnormalities in cancer</a>
+                            </td>                            
+                        </tr>-->
+                        <tr class="separate top bottom">
+                            <td class="left">
+                                <a href="http://www.bci.qmul.ac.uk/" target="_blank" title="Click to view the location homepage"><b>Barts Cancer Institute, UK</b></a>
+                            </td>
+                            <td>
+                                <a href="http://www.pancreasexpression.org/biomart/martview/1825ad73c61a3b177bda7e4f52b28d94" title="Click to go directly to the database" target="_blank">Pancreatic Expression Database</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.pancreasexpression.org/" target="_blank" title="Click to read a more detailed description">Results from published pancreatic cancer papers</a>
+                            </td>
+                        </tr>
+                        <tr class="separate top bottom">
+                            <td class="left">
+                                <a href="http://www.breastcancercampaign.org/page.aspx?pid=383" target="_blank" title="Click to view the location homepage"><b>Breast Cancer Campaign, UK and Ireland</b></a>
+                            </td>
+                            <td>
+                                <a href="http://bioinformatics.breastcancertissuebank.org/biomart/martview/19e7e70c4304a66f8324d5396a2b3f09" target="_blank" title="Click to go directly to the database">BCCTB Bioinformatics Portal</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.breastcancertissuebank.org/about-tissue-bank.php" target="_blank" title="Click to read a more detailed description">Breast cancer tissue information</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="separate top bottom">
+                            <td class="left">
+                                <a href="http://www.caltech.edu/" target="_blank" title="Click to view the location homepage"><b>California Institute of Technology, US</b></a>
+                            </td>
+                            <td>
+                                <a href="http://whis.caltech.edu:5430/" target="_blank" title="Click to go directly to the database">SpMart</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://whis.caltech.edu:5430/" target="_blank" title="Click to read a more detailed description">Sea urchin (Strongylocentrotus purpuratus) genome database</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr>                                
+                            <td>
+                                <a href="http://caprica.caltech.edu:9002/biomart/martview" target="_blank">WormBase</a>
+                            </td>
+                            <td>
+                                <a href="http://www.wormbase.org/" target="_blank">C. elegans and related nematode genomic information</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.cmm.uchile.cl/index.php?option=detalle&CodigoNoticia=1604&lang=en" target="_blank" title="Click to view the location homepage"><b>Center for Mathematical Modeling and Center for Genome Regulation (CMM), Chile</b></a>
+                            </td>
+                            <td>
+                                <a href="http://salmonmart.cmm.uchile.cl/biomart/martview" target="_blank" title="Click to go directly to the database">SalmonDB</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://genomicasalmones.dim.uchile.cl/" target="_blank" title="Click to read a more detailed description">Genomic information for Atlantic salmon, rainbow trout, and related species</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left">
+                                <a href="http://www.cnrs.fr/" target="_blank" title="Click to view the location homepage"><b>Centre National de la Recherche Scientifique (CNRS), France</b></a>
+                            </td>
+                            <td>
+                                <a href="http://cildb.cgm.cnrs-gif.fr/v2/biomart/martview/71e0e9c5ea5f77b7dda54c6d00cc26a2" target="_blank" title="Click to go directly to the database">Cildb</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://cildb.cgm.cnrs-gif.fr/" target="_blank" title="Click to read a more detailed description">Database for eukaryotic cilia and centriolar structures, integrating orthology relationships for 33 species with high throughput studies and OMIM</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a href="http://paramecium.cgm.cnrs-gif.fr/biomart/martview/3cfa14c55fe847423b606917fe7010a3" target="_blank" title="Click to go directly to the database">Paramecium DB</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://paramecium.cgm.cnrs-gif.fr/" target="_blank" title="Click to read a more detailed description">Paramecium genome database</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left">
+                                <a href="http://www.cshl.edu/" target="_blank" title="Click to view the location homepage"><b>Cold Spring Harbor Laboratory (CSHL), US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.gramene.org/Multi/martview" target="_blank">Gramene</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.gramene.org/" target="_blank" title="Click to read a more detailed description">Agriculturally important grass genomes</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">                                
+                            <td>
+                                <a title="Click to go directly to the database" href="http://caprica.caltech.edu:9002/biomart/martview" target="_blank">WormBase</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.wormbase.org/" target="_blank" title="Click to read a more detailed description">C. elegans and related nematode genomic information</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td rowspan="10" class="left">
+                                <a href="http://www.ebi.ac.uk/" target="_blank" title="Click to view the location homepage"><b>European Bioinformatics Institute (EBI), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.emmanet.org/biomart/martview" target="_blank">EMMA</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.emmanet.org/" target="_blank" title="Click to read a more detailed description">Mouse mutant strain information</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr>
+                            <td>
+                                <a href="http://www.ensembl.org/biomart/martview" target="_blank">Ensembl</a>
+                            </td>
+                            <td>
+                                <a href="http://www.ensembl.org/" target="_blank">Genome databases for vertebrates and other eukaryotic species</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td rowspan="9" class="left">
+                                <a href="http://www.ebi.ac.uk/" target="_blank" title="Click to view the location homepage"><b>European Bioinformatics Institute (EBI), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://bacteria.ensembl.org/biomart/martview" target="_blank">Ensembl Bacteria</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://bacteria.ensembl.org/" target="_blank" title="Click to read a more detailed description">Genome databases for bacteria</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.gen.cam.ac.uk/" target="_blank" title="Click to view the location homepage"><b>Department of Genetics, University of Cambridge, Cambridge, UK</b></a>
+                            </td>
+                            <td>
+                                <a href="http://dapper.gen.cam.ac.uk/" target="_blank" title="Click to go directly to the database">DAPPER</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://dapper.gen.cam.ac.uk/biomart/martview" target="_blank" title="Click to read a more detailed description">Mass spec identified protein interaction networks in Drosophilacell cycle regulation</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="6" class="left">
+                                <a href="http://www.ebi.ac.uk/" target="_blank" title="Click to view the location homepage"><b>European Bioinformatics Institute (EBI), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://fungi.ensembl.org/biomart/martview" target="_blank">Ensembl Genomes</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://ensemblgenomes.org/" target="_blank" title="Click to read a more detailed description">Genome databases for fungi, metazoa, plants and protists</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://metazoa.ensembl.org/biomart/martview" target="_blank">Ensembl Metazoa</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://metazoa.ensembl.org/" target="_blank" title="Click to read a more detailed description">Genome databases for metazoa</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://plants.ensembl.org/biomart/martview" target="_blank">Ensembl Plants</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://plants.ensembl.org/" target="_blank" title="Click to read a more detailed description">Genome databases for plants</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://protists.ensembl.org/biomart/martview" target="_blank">Ensembl Protists</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://protists.ensembl.org/" target="_blank" title="Click to read a more detailed description">Genome databases for protists</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.genenames.org/biomart/martview" target="_blank">HGNC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.genenames.org/" target="_blank" title="Click to read a more detailed description">Repository of human gene nomenclature and associated resources</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ebi.ac.uk/interpro/biomart/martview" target="_blank">InterPro</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ebi.ac.uk/interpro/" target="_blank" title="Click to read a more detailed description">Integrated database of predictive protein "signatures" used for the classification and automatic annotation of proteins and genomes</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ebi.ac.uk/pride/prideMart.do" target="_blank">PRIDE</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ebi.ac.uk/pride/" target="_blank" title="Click to read a more detailed description">Repository for protein and peptide identifications</a>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td>
+                                <a href="http://www.reactome.org:5555/biomart/martview" target="_blank">Reactome</a>
+                            </td>
+                            <td>
+                                <a href="http://www.reactome.org/" target="_blank">Curated pathway annotation database</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ebi.ac.uk/uniprot/biomart/martview" target="_blank">UniProt</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ebi.ac.uk/uniprot/" target="_blank" title="Click to read a more detailed description">Protein sequence and functional information</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://parasite.wormbase.org/index.html" target="_blank">WormBase ParaSite</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://parasite.wormbase.org/biomart/martview" target="_blank" title="Click to read a more detailed description">Parasitic worms (helminths) are responsible for more than a billion human infections globally and have a devastating impact on livestock and agriculture.</a>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td>
+                                <a href="http://caprica.caltech.edu:9002/biomart/martview" target="_blank">WormBase</a>
+                            </td>
+                            <td>
+                                <a href="http://www.wormbase.org/" target="_blank">C. elegans and related nematode genomic information</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.har.mrc.ac.uk/index.html" target="_blank" title="Click to view the location homepage"><b>Harwell Science and Innovation Campus (MRC Harwell), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.europhenome.org/biomart.php" target="_blank">EuroPhenome</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.europhenome.org/" target="_blank" title="Click to read a more detailed description">Mouse phenotyping data</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.i-pharm.org/" target="_blank" title="Click to view the location homepage"><b>Information Center for Bio-pharmacological Network (i-Pharm), South Korea</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://biomart.i-pharm.org/" target="_blank">i-Pharm</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.i-pharm.org/" target="_blank" title="Click to read a more detailed description">Pharmacological network database consisting of three kinds of nodes: human diseases, drugs, and proteins</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.inserm.fr/" target="_blank" title="Click to view the location homepage"><b>Institut national de la santé et de la recherche médicale (Inserm), France</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.germonline.org/biomart/martview" target="_blank">GermOnline</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.germonline.org/" target="_blank" title="Click to read a more detailed description">Cross-species microarray expression database focusing on germline development, meiosis, and gametogenesis as well as the mitotic cell cycle</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left">
+                                <a href="http://urgi.versailles.inra.fr/" target="_blank" title="Click to view the location homepage"><b> Institut Nationale de Recherche Agronomique (INRA), Unité de Recherche en Génomique-Info (URGI), France</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://urgi.versailles.inra.fr/biomart/martview/" target="_blank">GnpIS</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://urgi.versailles.inra.fr/gnpis/" target="_blank" title="Click to read a more detailed description">Genetic and Genomic Information System (GnpIS)</a>
+                            </td>
+                        </tr>
+                         <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ebi.ac.uk/uniprot/biomart/martview" target="_blank">UniProt</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ebi.ac.uk/uniprot/" target="_blank" title="Click to read a more detailed description">Protein sequence and functional information</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.cipotato.org/" target="_blank" title="Click to view the location homepage"><b>International Potato Center (CIP), Peru</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://germplasmdb.cip.cgiar.org/" target="_blank">Potato database</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.cipotato.org/" target="_blank" title="Click to read a more detailed description">Potato and sweetpotato phenotypic and genomic information</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.jax.org/" target="_blank" title="Click to view the location homepage"><b>Jackson Laboratory, US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://biomart.informatics.jax.org/biomart/martview" target="_blank">MGI</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://informatics.jax.org/" target="_blank" title="Click to read a more detailed description">Mouse genome features, locations, alleles, and orthologs</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.jgi.doe.gov/" target="_blank" title="Click to view the location homepage"><b>Joint Genome Institute (JGI)/Center for Integrative Genomics (CIG), US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.phytozome.net/biomart/martview" target="_blank">Phytozome</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.phytozome.net/" target="_blank" title="Click to read a more detailed description">Comparative genomics of green plants</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left">
+                                <a href="http://www.kazusa.or.jp/e/" target="_blank" title="Click to view the location homepage"><b>Kazusa DNA Research Institute (Kazusa), Japan</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://mart.kazusa.or.jp/biomart/martview" target="_blank">KazusaMart</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://mart.kazusa.or.jp/" target="_blank" title="Click to read a more detailed description">Cyanobase, rhizobia, and plant genome databases</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left"> 
+                                <a href="http://www.hgu.mrc.ac.uk/" target="_blank" title="Click to view the location homepage"><b>Medical Research Council, Human Genetics Unit (MRC HGU), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://biomart.emouseatlas.org/" target="_blank">EMAGE</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.emouseatlas.org/emage/home.php" target="_blank" title="Click to read a more detailed description">Anatomy ontology and in situ gene expression data in the mouse ontology</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.eurexpress.org/ee/databases/biomart.jsp" target="_blank">Eurexpress</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.eurexpress.org/" target="_blank" title="Click to read a more detailed description">Transcriptome atlas database for mouse embryo</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.ncbi.nlm.nih.gov/" target="_blank" title="Click to view the location homepage"><b>National Center for Biotechnology Information (NCBI), US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://hapmart.hapmap.org/BioMart/martview" target="_blank">HapMap</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://hapmap.org/" target="_blank" title="Click to read a more detailed description">Multi-country effort to identify and catalog genetic similarities and differences in human beings</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="separate">
+                            <td> 
+                                <a href="http://www.med.nyu.edu/" target="_blank">New York University Langone Medical Center, US</a>
+                            </td>
+                            <td>
+                                <a href="http://www.reactome.org:5555/biomart/martview" target="_blank">Reactome</a>
+                            </td>
+                            <td>
+                                <a href="http://www.reactome.org/" target="_blank">Curated pathway annotation database</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td rowspan="1" class="left"> 
+                                <a href="http://oicr.on.ca/" target="_blank" title="Click to view the location homepage"><b>Ontario Institute for Cancer Research (OICR), Canada</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.reactome.org:5555/biomart/martview" target="_blank">Reactome</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.reactome.org/" target="_blank" title="Click to read a more detailed description">Curated pathway annotation database</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://dcc.icgc.org/" target="_blank">ICGC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://dcc.icgc.org/" target="_blank" title="Click to read a more detailed description">Catalogue of genomic abnormalities in cancer</a>
+                            </td>                            
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left"> 
+                                <a href="http://english.pku.edu.cn/" target="_blank" title="Click to view the location homepage"><b>Peking University, China</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://ricemart.cbi.edu.cn/biomart/martview" target="_blank">Rice-Map</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ricemap.org/" target="_blank" title="Click to read a more detailed description">Rice (japonica and indica) genome annotation database</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.rhesusbase.org:9000" target="_blank">RhesusBase</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.rhesusbase.org" target="_blank" title="Click to read a more detailed description">A knowledgebase for the monkey research community</a>
+                            </td>                            
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.riken.jp/en/research/labs/clst/" target="_blank" title="Click to view the location homepage"><b>RIKEN Center for Life Science Technologies (CLST), Japan</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://fantom.gsc.riken.jp/" target="_blank">FANTOM5</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://fantom.gsc.riken.jp/5/biomart/martview/" target="_blank" title="Click to read a more detailed description">The FANTOM5 project mapped a promoter level expression atlas in human and mouse. The FANTOM5 BioMart instance provides the set of promoters along with annotation.</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.qcmg.org/" target="_blank" title="Click to view the location homepage"><b>Queensland Centre for Medical Genomics, Australia</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://qcmg-biomart.imb.uq.edu.au/" target="_blank">ICGC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://qcmg-biomart.imb.uq.edu.au/" target="_blank" title="Click to read a more detailed description">Catalogue of genomic abnormalities in cancer</a>
+                            </td>
+                        </tr>-->
+                        <!--<tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.ucla.edu/" target="_blank" title="Click to view the location homepage"><b>University of California Los Angeles (UCLA), US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://hspp-bck.dent.ucla.edu/biomart/martview/" target="_blank">SDxMart</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.skb.ucla.edu/" target="_blank" title="Click to read a more detailed description">Saliva diagnostics for high-impact human diseases</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www2.le.ac.uk/departments/genetics/research/bioinformatics" target="_blank" title="Click to view the location homepage"><b>University of Leicester, UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="https://www.gwascentral.org/biomart/martview/" target="_blank">GWAS Central</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.gwascentral.org/info/about/" target="_blank" title="Click to read a more detailed description">GWAS Central provides a centralized compilation of summary level findings from genetic association studies, both large and small.</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td rowspan="2" class="left"> 
+                                <a href="http://www.inra.fr/" target="_blank" title="Click to view the location homepage"><b>INRA - French National Institute of Agricultural Research, France</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.sigenae.org/" target="_blank">sigReannot</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://sigreannot-mart.toulouse.inra.fr/" target="_blank" title="Click to read a more detailed description">Aquaculture and farm animal species microarray probes re-annotation</a>
+                            </td>
+                        </tr>
+                         <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="https://urgi.versailles.inra.fr/gnpis/" target="_blank">GnpIS</a>
+                            </td>
+                            <td class="right">
+                                <a href="https://urgi.versailles.inra.fr/biomart/martview/" target="_blank" title="Click to read a more detailed description">Genetic and Genomic Information System (GnpIS)</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.manchester.ac.uk/" target="_blank" title="Click to view the location homepage"><b>University of Manchester, UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ispider.manchester.ac.uk/pepseeker" target="_blank">PepSeeker</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ispider.manchester.ac.uk/" target="_blank" title="Click to read a more detailed description">Database of proteome peptide identifications for investigating fragmentation patterns</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.iastate.edu/" target="_blank" title="Click to view the location homepage"><b>Iowa State University, US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.animalgenome.org/" target="_blank">Animal Genome database</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.animalgenome.org:8181/" target="_blank" title="Click to read a more detailed description">Agriculturally important livestock genomes</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://nd.edu/" target="_blank" title="Click to view the location homepage"><b>University of Notre Dame, US</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://biomart.vectorbase.org/biomart/martview" target="_blank">VectorBase</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://vectorbase.org/" target="_blank" title="Click to read a more detailed description">Genome information for invertebrate vectors of human pathogens</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td class="left" rowspan="2"> 
+                                <a href="http://www.upf.edu/en/" target="_blank" title="Click to view the location homepage"><b>Universitat Pompeu Fabra (UPF), Spain</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://biomart.intogen.org/biomart/martview" target="_blank">IntOGen</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.intogen.org/" target="_blank" title="Click to read a more detailed description">Integrated multidimensional data for the identification of genes and groups of genes involved in cancer development</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">   
+                            <td class="left"> 
+                                <a href="http://www.upf.edu/en/" target="_blank" title="Click to view the location homepage"><b>Universitat Pompeu Fabra (UPF), Spain</b></a>
+                            </td>                             
+                            <td>
+                                <a title="Click to go directly to the database" href="http://archimedes.imim.es:9009/biomart/martview/36e00ae657f7efc9f276fcddf155c8ce" target="_blank">Regulatory Genomics Group</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://regulatorygenomics.upf.edu/group/" target="_blank" title="Click to read a more detailed description">Predictive Models of Gene Regulation from High-Throughput Epigenomics Data</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td class="left"> 
+                                <a href="http://www.unitn.it/en" target="_blank" title="Click to view the location homepage"><b>University of Trento, Italy</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://aura.science.unitn.it/biomart/martview/" target="_blank">Atlas of UTR Regulatory Activity (AURA)</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://aura.science.unitn.it/" target="_blank" title="Click to read a more detailed description">Manually curated and comprehensive catalog of human UTRs and UTR regulatory annotations</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="separate">
+                            <td> 
+                                <a href="http://www.washington.edu/" target="_blank">Washington University, US</a>
+                            </td>
+                            <td>
+                                <a href="http://caprica.caltech.edu:9002/biomart/martview" target="_blank">WormBase</a>
+                            </td>
+                            <td>
+                                <a href="http://www.wormbase.org/" target="_blank">C. elegans and related nematode genomic information</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td rowspan="6" class="left"> 
+                                <a href="http://www.sanger.ac.uk/" target="_blank" title="Click to view the location homepage"><b>Wellcome Trust Sanger Institute (WTSI), UK</b></a>
+                            </td>
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.sanger.ac.uk/genetics/CGP/cosmic/biomart/martview" target="_blank">COSMIC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.sanger.ac.uk/genetics/CGP/cosmic/" target="_blank" title="Click to read a more detailed description">Somatic mutation information relating to human cancers</a>
+                            </td>
+                        </tr>
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ensembl.org/biomart/martview" target="_blank">Ensembl</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.ensembl.org/" target="_blank" title="Click to read a more detailed description">Genome databases for vertebrates and other eukaryotic species</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.i-dcc.org/biomart/martview/" target="_blank">IKMC</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.i-dcc.org/" target="_blank" title="Click to read a more detailed description">Data on mutant products (mice, ES cells and vectors) generated and made available by members of the International Knockout Mouse Consotium (IKMC)</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.ensembl.org/biomart/martview" target="_blank">VEGA</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://vega.sanger.ac.uk/" target="_blank" title="Click to read a more detailed description">Manual annotation of vertebrate genome sequences</a>
+                            </td>
+                        </tr>
+                        <!--<tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://www.sanger.ac.uk/htgt/biomart/martview/" target="_blank">WTSI Mouse Genetics Project</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://www.sanger.ac.uk/htgt/" target="_blank" title="Click to read a more detailed description">Mouse phenotyping and expression data captured from mutant mouse lines</a>
+                            </td>
+                        </tr>-->
+                        <tr class="top bottom">
+                            <td>
+                                <a title="Click to go directly to the database" href="http://xfam-biomart.sanger.ac.uk/" target="_blank">Rfam</a>
+                            </td>
+                            <td class="right">
+                                <a href="http://rfam.sanger.ac.uk/" target="_blank" title="Click to read a more detailed description">The Rfam database is a collection of RNA families, each represented by multiple sequence alignments, consensus secondary structures and covariance models (CMs).</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </body>
+</html>
